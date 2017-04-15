@@ -1,0 +1,2957 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="nature"      for="graph" attr.name="nature"     attr.type="string"/>  
+  <key id="program-start" for="graph" attr.name="program-start" attr.type="string"/>
+  <key id="label"       for="node" attr.name="label"       attr.type="string"/>
+  <key id="kind"        for="node" attr.name="kind"        attr.type="string"> <default>declaration</default> </key>
+  <key id="syntax"      for="node" attr.name="syntax"      attr.type="string"/>
+  <key id="basic-block" for="node" attr.name="basic-block" attr.type="string"/>
+  <key id="file"        for="node" attr.name="file"        attr.type="string"/>
+  <key id="procedure"   for="node" attr.name="procedure"   attr.type="string"/>
+  <key id="lines"       for="node" attr.name="lines"       attr.type="string"/>
+  <key id="call-id"     for="node" attr.name="call-id"     attr.type="string"/>
+  <key id="call-name"   for="node" attr.name="call-name"   attr.type="string"/>
+  <key id="alocs-used"  for="node" attr.name="alocs-used"  attr.type="string"/>
+  <key id="alocs-defd"  for="node" attr.name="alocs-defd"  attr.type="string"/>
+  <key id="alocs-mayd"  for="node" attr.name="alocs-mayd"  attr.type="string"/>
+  <key id="csi-label" 	for="node" attr.name="csi-label"   attr.type="string"/>
+  <key id="type"        for="edge" attr.name="type"        attr.type="string"> <default>flow</default> </key>
+  <key id="when"        for="edge" attr.name="when"        attr.type="string"> <default>true</default> </key>
+  <key id="scope"       for="edge" attr.name="scope"       attr.type="string"> <default>intraprocedural</default> </key>
+  <graph id="CFG" edgedefault="directed">
+  <data key="program-start">n:-1:1</data>
+  <data key="nature">CFG</data>
+    <node id="n:-2:1">
+      <data key="label">entry: returnRandom</data>
+      <data key="kind">entry</data>
+      <data key="file">cs.wisc.test.Buggy.java</data>
+      <data key="procedure">cs.wisc.test.Buggy@ java.util.Random returnRandom()</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-2:1" target="n:-2:3"/>
+    <node id="n:-2:2">
+      <data key="label">exit: returnRandom</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-2:3">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-2:3" target="n:-2:4"/>
+    <node id="n:-2:4">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-2:4" target="n:-2:5"/>
+    <node id="n:-2:5">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-2:5" target="n:-2:6"/>
+    <node id="n:-2:6">
+      <data key="label">globalBooleanCCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBooleanCallCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-2:6" target="n:-2:7"/>
+    <node id="n:-2:7">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-2:7" target="n:-2:8"/>
+    <node id="n:-2:8">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-2:8" target="n:-2:9"/>
+    <node id="n:-2:9">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-2:9" target="n:-2:10"/>
+    <node id="n:-2:10">
+      <data key="label">globalBooleanBBCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBBCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-2:10" target="n:-2:11"/>
+    <node id="n:-2:11">
+      <data key="label">globalBooleanFCArray = *uwmadison.soot.analysis.Trace: boolean[] globalFunctionCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-2:11" target="n:-2:12"/>
+    <node id="n:-2:12">
+      <data key="label">globalBooleanFCArray[0] = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-2:12" target="n:-2:13"/>
+    <node id="n:-2:13">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-2:13" target="n:-2:14"/>
+    <node id="n:-2:14">
+      <data key="label">temp$0 = new java.util.Random</data>
+      <data key="kind">expression</data>
+      <data key="lines">(0)</data>
+    </node>
+    <edge source="n:-2:14" target="n:-2:15"/>
+    <node id="n:-2:15">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-2:15" target="n:-2:16"/>
+    <node id="n:-2:16">
+      <data key="label">currBoolean = globalBooleanCCArray[0]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-2:16" target="n:-2:17"/>
+    <node id="n:-2:17">
+      <data key="label">if currBoolean == 1 goto specialinvoke temp$0.*java.util.Random: void *init*()*()</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-2:17" target="n:-2:18"/>
+    <edge source="n:-2:17" target="n:-2:19"/>
+    <node id="n:-2:18">
+      <data key="label">globalBooleanCCArray[0] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC0</data>
+    </node>
+    <edge source="n:-2:18" target="n:-2:19"/>
+    <node id="n:-2:19">
+      <data key="label">specialinvoke temp$0.*java.util.Random: void *init*()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(1)</data>
+    </node>
+    <edge source="n:-2:19" target="n:-3:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-2:19" target="n:-2:20"/>
+    <node id="n:-2:20">
+      <data key="label">rd = temp$0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(2)</data>
+    </node>
+    <edge source="n:-2:20" target="n:-2:21"/>
+    <node id="n:-2:21">
+      <data key="label">globalBooleanBBCArray[0] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC0</data>
+    </node>
+    <edge source="n:-2:21" target="n:-2:22"/>
+    <node id="n:-2:22">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-2:22" target="n:-2:23"/>
+    <node id="n:-2:23">
+      <data key="label">return rd</data>
+      <data key="kind">expression</data>
+      <data key="lines">(3)</data>
+    </node>
+    <edge source="n:-2:23" target="n:-2:2"/>
+    <node id="n:-2:38">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC0</data>
+    </node>
+    <edge source="n:-2:13" target="n:-2:38"/>
+    <edge source="n:-2:14" target="n:-2:38"/>
+    <edge source="n:-2:15" target="n:-2:38"/>
+    <edge source="n:-2:16" target="n:-2:38"/>
+    <edge source="n:-2:17" target="n:-2:38"/>
+    <edge source="n:-2:18" target="n:-2:38"/>
+    <edge source="n:-2:19" target="n:-2:38"/>
+    <edge source="n:-2:20" target="n:-2:38"/>
+    <edge source="n:-2:21" target="n:-2:38"/>
+    <edge source="n:-2:22" target="n:-2:38"/>
+    <edge source="n:-2:23" target="n:-2:38"/>
+    <node id="n:-4:1">
+      <data key="label">entry: returnRandomParam</data>
+      <data key="kind">entry</data>
+      <data key="file">cs.wisc.test.Buggy.java</data>
+      <data key="procedure">cs.wisc.test.Buggy@ java.util.Random returnRandomParam(java.util.Random)</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-4:1" target="n:-4:3"/>
+    <node id="n:-4:2">
+      <data key="label">exit: returnRandomParam</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-4:3">
+      <data key="label">r := @parameter0: java.util.Random</data>
+      <data key="kind">expression</data>
+      <data key="lines">(0)</data>
+    </node>
+    <edge source="n:-4:3" target="n:-4:4"/>
+    <node id="n:-4:4">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:4" target="n:-4:5"/>
+    <node id="n:-4:5">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:5" target="n:-4:6"/>
+    <node id="n:-4:6">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:6" target="n:-4:7"/>
+    <node id="n:-4:7">
+      <data key="label">globalBooleanCCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBooleanCallCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:7" target="n:-4:8"/>
+    <node id="n:-4:8">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:8" target="n:-4:9"/>
+    <node id="n:-4:9">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:9" target="n:-4:10"/>
+    <node id="n:-4:10">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:10" target="n:-4:11"/>
+    <node id="n:-4:11">
+      <data key="label">globalBooleanBBCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBBCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:11" target="n:-4:12"/>
+    <node id="n:-4:12">
+      <data key="label">globalBooleanFCArray = *uwmadison.soot.analysis.Trace: boolean[] globalFunctionCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:12" target="n:-4:13"/>
+    <node id="n:-4:13">
+      <data key="label">globalBooleanFCArray[1] = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:13" target="n:-4:14"/>
+    <node id="n:-4:14">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:14" target="n:-4:15"/>
+    <node id="n:-4:15">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:15" target="n:-4:16"/>
+    <node id="n:-4:16">
+      <data key="label">currBoolean = globalBooleanCCArray[1]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:16" target="n:-4:17"/>
+    <node id="n:-4:17">
+      <data key="label">if currBoolean == 1 goto virtualinvoke r.*java.util.Random: void setSeed(long)*(3232L)</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:17" target="n:-4:18"/>
+    <edge source="n:-4:17" target="n:-4:19"/>
+    <node id="n:-4:18">
+      <data key="label">globalBooleanCCArray[1] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC0</data>
+    </node>
+    <edge source="n:-4:18" target="n:-4:19"/>
+    <node id="n:-4:19">
+      <data key="label">virtualinvoke r.*java.util.Random: void setSeed(long)*(3232L)</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(1)</data>
+    </node>
+    <edge source="n:-4:19" target="n:-5:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-4:19" target="n:-4:20"/>
+    <node id="n:-4:20">
+      <data key="label">globalBooleanBBCArray[1] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC0</data>
+    </node>
+    <edge source="n:-4:20" target="n:-4:21"/>
+    <node id="n:-4:21">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:21" target="n:-4:22"/>
+    <node id="n:-4:22">
+      <data key="label">return r</data>
+      <data key="kind">expression</data>
+      <data key="lines">(2)</data>
+    </node>
+    <edge source="n:-4:22" target="n:-4:2"/>
+    <node id="n:-4:37">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC0</data>
+    </node>
+    <edge source="n:-4:3" target="n:-4:37"/>
+    <edge source="n:-4:4" target="n:-4:37"/>
+    <edge source="n:-4:5" target="n:-4:37"/>
+    <edge source="n:-4:6" target="n:-4:37"/>
+    <edge source="n:-4:7" target="n:-4:37"/>
+    <edge source="n:-4:8" target="n:-4:37"/>
+    <edge source="n:-4:9" target="n:-4:37"/>
+    <edge source="n:-4:10" target="n:-4:37"/>
+    <edge source="n:-4:11" target="n:-4:37"/>
+    <edge source="n:-4:12" target="n:-4:37"/>
+    <edge source="n:-4:13" target="n:-4:37"/>
+    <edge source="n:-4:14" target="n:-4:37"/>
+    <edge source="n:-4:15" target="n:-4:37"/>
+    <edge source="n:-4:16" target="n:-4:37"/>
+    <edge source="n:-4:17" target="n:-4:37"/>
+    <edge source="n:-4:18" target="n:-4:37"/>
+    <edge source="n:-4:19" target="n:-4:37"/>
+    <edge source="n:-4:20" target="n:-4:37"/>
+    <edge source="n:-4:21" target="n:-4:37"/>
+    <edge source="n:-4:22" target="n:-4:37"/>
+    <node id="n:-6:1">
+      <data key="label">entry: doNothingStaticNoParam</data>
+      <data key="kind">entry</data>
+      <data key="file">cs.wisc.test.Buggy.java</data>
+      <data key="procedure">cs.wisc.test.Buggy@ void doNothingStaticNoParam()</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-6:1" target="n:-6:3"/>
+    <node id="n:-6:2">
+      <data key="label">exit: doNothingStaticNoParam</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-6:3">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-6:3" target="n:-6:4"/>
+    <node id="n:-6:4">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-6:4" target="n:-6:5"/>
+    <node id="n:-6:5">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-6:5" target="n:-6:6"/>
+    <node id="n:-6:6">
+      <data key="label">globalBooleanBBCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBBCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-6:6" target="n:-6:7"/>
+    <node id="n:-6:7">
+      <data key="label">globalBooleanFCArray = *uwmadison.soot.analysis.Trace: boolean[] globalFunctionCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-6:7" target="n:-6:8"/>
+    <node id="n:-6:8">
+      <data key="label">globalBooleanFCArray[2] = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-6:8" target="n:-6:9"/>
+    <node id="n:-6:9">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-6:9" target="n:-6:10"/>
+    <node id="n:-6:10">
+      <data key="label">return</data>
+      <data key="kind">expression</data>
+      <data key="lines">(0)</data>
+    </node>
+    <edge source="n:-6:10" target="n:-6:2"/>
+    <node id="n:-6:11">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-6:11" target="n:-6:12"/>
+    <node id="n:-6:12">
+      <data key="label">globalBooleanBBCArray[2] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC0</data>
+    </node>
+    <edge source="n:-6:12" target="n:-6:13"/>
+    <node id="n:-6:13">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-6:13" target="n:-6:14"/>
+    <node id="n:-6:14">
+      <data key="label">return</data>
+      <data key="kind">expression</data>
+      <data key="lines">(1)</data>
+    </node>
+    <edge source="n:-6:14" target="n:-6:2"/>
+    <node id="n:-6:26">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC0</data>
+    </node>
+    <edge source="n:-6:9" target="n:-6:26"/>
+    <edge source="n:-6:10" target="n:-6:26"/>
+    <node id="n:-6:27">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC1</data>
+    </node>
+    <edge source="n:-6:14" target="n:-6:27"/>
+    <node id="n:-7:1">
+      <data key="label">entry: doNothingStaticParam</data>
+      <data key="kind">entry</data>
+      <data key="file">cs.wisc.test.Buggy.java</data>
+      <data key="procedure">cs.wisc.test.Buggy@ void doNothingStaticParam(java.util.Random)</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-7:1" target="n:-7:3"/>
+    <node id="n:-7:2">
+      <data key="label">exit: doNothingStaticParam</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-7:3">
+      <data key="label">r := @parameter0: java.util.Random</data>
+      <data key="kind">expression</data>
+      <data key="lines">(0)</data>
+    </node>
+    <edge source="n:-7:3" target="n:-7:4"/>
+    <node id="n:-7:4">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-7:4" target="n:-7:5"/>
+    <node id="n:-7:5">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-7:5" target="n:-7:6"/>
+    <node id="n:-7:6">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-7:6" target="n:-7:7"/>
+    <node id="n:-7:7">
+      <data key="label">globalBooleanBBCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBBCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-7:7" target="n:-7:8"/>
+    <node id="n:-7:8">
+      <data key="label">globalBooleanFCArray = *uwmadison.soot.analysis.Trace: boolean[] globalFunctionCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-7:8" target="n:-7:9"/>
+    <node id="n:-7:9">
+      <data key="label">globalBooleanFCArray[3] = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-7:9" target="n:-7:10"/>
+    <node id="n:-7:10">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-7:10" target="n:-7:11"/>
+    <node id="n:-7:11">
+      <data key="label">return</data>
+      <data key="kind">expression</data>
+      <data key="lines">(1)</data>
+    </node>
+    <edge source="n:-7:11" target="n:-7:2"/>
+    <node id="n:-7:12">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-7:12" target="n:-7:13"/>
+    <node id="n:-7:13">
+      <data key="label">globalBooleanBBCArray[3] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC0</data>
+    </node>
+    <edge source="n:-7:13" target="n:-7:14"/>
+    <node id="n:-7:14">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-7:14" target="n:-7:15"/>
+    <node id="n:-7:15">
+      <data key="label">return</data>
+      <data key="kind">expression</data>
+      <data key="lines">(2)</data>
+    </node>
+    <edge source="n:-7:15" target="n:-7:2"/>
+    <node id="n:-7:27">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC0</data>
+    </node>
+    <edge source="n:-7:3" target="n:-7:27"/>
+    <edge source="n:-7:4" target="n:-7:27"/>
+    <edge source="n:-7:5" target="n:-7:27"/>
+    <edge source="n:-7:6" target="n:-7:27"/>
+    <edge source="n:-7:7" target="n:-7:27"/>
+    <edge source="n:-7:8" target="n:-7:27"/>
+    <edge source="n:-7:9" target="n:-7:27"/>
+    <edge source="n:-7:10" target="n:-7:27"/>
+    <edge source="n:-7:11" target="n:-7:27"/>
+    <node id="n:-7:28">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC1</data>
+    </node>
+    <edge source="n:-7:15" target="n:-7:28"/>
+    <node id="n:-8:1">
+      <data key="label">entry: run</data>
+      <data key="kind">entry</data>
+      <data key="file">cs.wisc.test.Buggy.java</data>
+      <data key="procedure">cs.wisc.test.Buggy@ void run()</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-8:1" target="n:-8:3"/>
+    <node id="n:-8:2">
+      <data key="label">exit: run</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-8:3">
+      <data key="label">this := @this: cs.wisc.test.Buggy</data>
+      <data key="kind">expression</data>
+      <data key="lines">(0)</data>
+    </node>
+    <edge source="n:-8:3" target="n:-8:4"/>
+    <node id="n:-8:4">
+      <data key="label">cc_int_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:4" target="n:-8:5"/>
+    <node id="n:-8:5">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:5" target="n:-8:6"/>
+    <node id="n:-8:6">
+      <data key="label">__cc_int_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:6" target="n:-8:7"/>
+    <node id="n:-8:7">
+      <data key="label">globalBooleanCCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBooleanCallCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:7" target="n:-8:8"/>
+    <node id="n:-8:8">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:8" target="n:-8:9"/>
+    <node id="n:-8:9">
+      <data key="label">cc_bool_1 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:9" target="n:-8:10"/>
+    <node id="n:-8:10">
+      <data key="label">cc_bool_2 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:10" target="n:-8:11"/>
+    <node id="n:-8:11">
+      <data key="label">cc_bool_3 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:11" target="n:-8:12"/>
+    <node id="n:-8:12">
+      <data key="label">cc_bool_4 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:12" target="n:-8:13"/>
+    <node id="n:-8:13">
+      <data key="label">cc_bool_5 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:13" target="n:-8:14"/>
+    <node id="n:-8:14">
+      <data key="label">cc_bool_6 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:14" target="n:-8:15"/>
+    <node id="n:-8:15">
+      <data key="label">cc_bool_7 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:15" target="n:-8:16"/>
+    <node id="n:-8:16">
+      <data key="label">cc_bool_8 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:16" target="n:-8:17"/>
+    <node id="n:-8:17">
+      <data key="label">cc_bool_9 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:17" target="n:-8:18"/>
+    <node id="n:-8:18">
+      <data key="label">cc_bool_10 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:18" target="n:-8:19"/>
+    <node id="n:-8:19">
+      <data key="label">cc_bool_11 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:19" target="n:-8:20"/>
+    <node id="n:-8:20">
+      <data key="label">cc_bool_12 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:20" target="n:-8:21"/>
+    <node id="n:-8:21">
+      <data key="label">cc_bool_13 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:21" target="n:-8:22"/>
+    <node id="n:-8:22">
+      <data key="label">cc_bool_14 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:22" target="n:-8:23"/>
+    <node id="n:-8:23">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:23" target="n:-8:24"/>
+    <node id="n:-8:24">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:24" target="n:-8:25"/>
+    <node id="n:-8:25">
+      <data key="label">globalBooleanBBCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBBCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:25" target="n:-8:26"/>
+    <node id="n:-8:26">
+      <data key="label">globalBooleanFCArray = *uwmadison.soot.analysis.Trace: boolean[] globalFunctionCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:26" target="n:-8:27"/>
+    <node id="n:-8:27">
+      <data key="label">globalBooleanFCArray[4] = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:27" target="n:-8:28"/>
+    <node id="n:-8:28">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:28" target="n:-8:29"/>
+    <node id="n:-8:29">
+      <data key="label">i = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(1)</data>
+    </node>
+    <edge source="n:-8:29" target="n:-8:30"/>
+    <node id="n:-8:30">
+      <data key="label">globalBooleanBBCArray[4] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC0</data>
+    </node>
+    <edge source="n:-8:30" target="n:-8:31"/>
+    <node id="n:-8:31">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:31" target="n:-8:32"/>
+    <node id="n:-8:32">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(2)</data>
+    </node>
+    <edge source="n:-8:32" target="n:-8:33"/>
+    <node id="n:-8:33">
+      <data key="label">globalBooleanBBCArray[5] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC1</data>
+    </node>
+    <edge source="n:-8:33" target="n:-8:34"/>
+    <node id="n:-8:34">
+      <data key="label">cc_bool_1 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:34" target="n:-8:35"/>
+    <node id="n:-8:35">
+      <data key="label">goto [?= nop]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(3)</data>
+    </node>
+    <edge source="n:-8:35" target="n:-8:36"/>
+    <node id="n:-8:36">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(4)</data>
+    </node>
+    <edge source="n:-8:36" target="n:-8:37"/>
+    <node id="n:-8:37">
+      <data key="label">globalBooleanBBCArray[6] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC2</data>
+    </node>
+    <edge source="n:-8:37" target="n:-8:38"/>
+    <node id="n:-8:38">
+      <data key="label">cc_bool_2 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:38" target="n:-8:53"/>
+    <edge source="n:-8:38" target="n:-8:39"/>
+    <node id="n:-8:39">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(5)</data>
+    </node>
+    <edge source="n:-8:39" target="n:-8:53"/>
+    <edge source="n:-8:39" target="n:-8:40"/>
+    <node id="n:-8:40">
+      <data key="label">globalBooleanBBCArray[7] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC3</data>
+    </node>
+    <edge source="n:-8:40" target="n:-8:53"/>
+    <edge source="n:-8:40" target="n:-8:41"/>
+    <node id="n:-8:41">
+      <data key="label">cc_bool_3 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:41" target="n:-8:53"/>
+    <edge source="n:-8:41" target="n:-8:42"/>
+    <node id="n:-8:42">
+      <data key="label">cc_int_0 = cc_int_0 | 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:42" target="n:-8:53"/>
+    <edge source="n:-8:42" target="n:-8:43"/>
+    <node id="n:-8:43">
+      <data key="label">currBoolean = globalBooleanCCArray[2]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:43" target="n:-8:53"/>
+    <edge source="n:-8:43" target="n:-8:44"/>
+    <node id="n:-8:44">
+      <data key="label">if currBoolean == 1 goto staticinvoke *java.lang.Thread: void sleep(long)*(10L)</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:44" target="n:-8:45"/>
+    <edge source="n:-8:44" target="n:-8:46"/>
+    <edge source="n:-8:44" target="n:-8:53"/>
+    <node id="n:-8:45">
+      <data key="label">globalBooleanCCArray[2] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC0</data>
+    </node>
+    <edge source="n:-8:45" target="n:-8:53"/>
+    <edge source="n:-8:45" target="n:-8:46"/>
+    <node id="n:-8:46">
+      <data key="label">staticinvoke *java.lang.Thread: void sleep(long)*(10L)</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(6)</data>
+    </node>
+    <edge source="n:-8:46" target="n:-9:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-8:46" target="n:-8:53"/>
+    <edge source="n:-8:46" target="n:-8:47"/>
+    <node id="n:-8:47">
+      <data key="label">globalBooleanBBCArray[8] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC4</data>
+    </node>
+    <edge source="n:-8:47" target="n:-8:53"/>
+    <edge source="n:-8:47" target="n:-8:48"/>
+    <node id="n:-8:48">
+      <data key="label">cc_bool_4 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:48" target="n:-8:53"/>
+    <edge source="n:-8:48" target="n:-8:49"/>
+    <node id="n:-8:49">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:49" target="n:-8:53"/>
+    <edge source="n:-8:49" target="n:-8:50"/>
+    <node id="n:-8:50">
+      <data key="label">globalBooleanBBCArray[9] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC5</data>
+    </node>
+    <edge source="n:-8:50" target="n:-8:53"/>
+    <edge source="n:-8:50" target="n:-8:51"/>
+    <node id="n:-8:51">
+      <data key="label">cc_bool_5 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:51" target="n:-8:53"/>
+    <edge source="n:-8:51" target="n:-8:52"/>
+    <node id="n:-8:52">
+      <data key="label">goto [?= nop]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(7)</data>
+    </node>
+    <edge source="n:-8:52" target="n:-8:53"/>
+    <edge source="n:-8:52" target="n:-8:66"/>
+    <node id="n:-8:53">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(8)</data>
+    </node>
+    <edge source="n:-8:53" target="n:-8:54"/>
+    <node id="n:-8:54">
+      <data key="label">e := @caughtexception</data>
+      <data key="kind">expression</data>
+      <data key="lines">(9)</data>
+    </node>
+    <edge source="n:-8:54" target="n:-8:55"/>
+    <node id="n:-8:55">
+      <data key="label">staticinvoke *uwmadison.soot.analysis.Trace: void freeBBCStack()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:55" target="n:-10:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-8:55" target="n:-8:56"/>
+    <node id="n:-8:56">
+      <data key="label">staticinvoke *uwmadison.soot.analysis.Trace: void freeCCStack()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:56" target="n:-11:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-8:56" target="n:-8:57"/>
+    <node id="n:-8:57">
+      <data key="label">cc_int_0 = cc_int_0 | 2</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:57" target="n:-8:58"/>
+    <node id="n:-8:58">
+      <data key="label">currBoolean = globalBooleanCCArray[3]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:58" target="n:-8:59"/>
+    <node id="n:-8:59">
+      <data key="label">if currBoolean == 1 goto virtualinvoke e.*java.lang.InterruptedException: void printStackTrace()*()</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:59" target="n:-8:60"/>
+    <edge source="n:-8:59" target="n:-8:61"/>
+    <node id="n:-8:60">
+      <data key="label">globalBooleanCCArray[3] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC1</data>
+    </node>
+    <edge source="n:-8:60" target="n:-8:61"/>
+    <node id="n:-8:61">
+      <data key="label">virtualinvoke e.*java.lang.InterruptedException: void printStackTrace()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(10)</data>
+    </node>
+    <edge source="n:-8:61" target="n:-12:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-8:61" target="n:-8:62"/>
+    <node id="n:-8:62">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(11)</data>
+    </node>
+    <edge source="n:-8:62" target="n:-8:63"/>
+    <node id="n:-8:63">
+      <data key="label">globalBooleanBBCArray[10] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC6</data>
+    </node>
+    <edge source="n:-8:63" target="n:-8:64"/>
+    <node id="n:-8:64">
+      <data key="label">cc_bool_6 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:64" target="n:-8:65"/>
+    <node id="n:-8:65">
+      <data key="label">goto [?= nop]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(12)</data>
+    </node>
+    <edge source="n:-8:65" target="n:-8:66"/>
+    <node id="n:-8:66">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(13)</data>
+    </node>
+    <edge source="n:-8:66" target="n:-8:67"/>
+    <node id="n:-8:67">
+      <data key="label">cc_int_0 = cc_int_0 | 4</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:67" target="n:-8:68"/>
+    <node id="n:-8:68">
+      <data key="label">currBoolean = globalBooleanCCArray[4]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:68" target="n:-8:69"/>
+    <node id="n:-8:69">
+      <data key="label">if currBoolean == 1 goto temp$0 = virtualinvoke this.*cs.wisc.test.Buggy: int randInt(int,int)*(0, 500)</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:69" target="n:-8:70"/>
+    <edge source="n:-8:69" target="n:-8:71"/>
+    <node id="n:-8:70">
+      <data key="label">globalBooleanCCArray[4] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC2</data>
+    </node>
+    <edge source="n:-8:70" target="n:-8:71"/>
+    <node id="n:-8:71">
+      <data key="label">temp$0 = virtualinvoke this.*cs.wisc.test.Buggy: int randInt(int,int)*(0, 500)</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(14)</data>
+    </node>
+    <edge source="n:-8:71" target="n:-13:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-8:71" target="n:-8:72"/>
+    <node id="n:-8:72">
+      <data key="label">ran = temp$0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(15)</data>
+    </node>
+    <edge source="n:-8:72" target="n:-8:73"/>
+    <node id="n:-8:73">
+      <data key="label">cc_int_0 = cc_int_0 | 8</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:73" target="n:-8:74"/>
+    <node id="n:-8:74">
+      <data key="label">currBoolean = globalBooleanCCArray[5]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:74" target="n:-8:75"/>
+    <node id="n:-8:75">
+      <data key="label">if currBoolean == 1 goto temp$1 = virtualinvoke this.*cs.wisc.test.Buggy: int randInt(int,int)*(0, 10)</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:75" target="n:-8:76"/>
+    <edge source="n:-8:75" target="n:-8:77"/>
+    <node id="n:-8:76">
+      <data key="label">globalBooleanCCArray[5] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC3</data>
+    </node>
+    <edge source="n:-8:76" target="n:-8:77"/>
+    <node id="n:-8:77">
+      <data key="label">temp$1 = virtualinvoke this.*cs.wisc.test.Buggy: int randInt(int,int)*(0, 10)</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(16)</data>
+    </node>
+    <edge source="n:-8:77" target="n:-13:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-8:77" target="n:-8:78"/>
+    <node id="n:-8:78">
+      <data key="label">alsoran = temp$1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(17)</data>
+    </node>
+    <edge source="n:-8:78" target="n:-8:79"/>
+    <node id="n:-8:79">
+      <data key="label">globalBooleanBBCArray[11] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC7</data>
+    </node>
+    <edge source="n:-8:79" target="n:-8:80"/>
+    <node id="n:-8:80">
+      <data key="label">cc_bool_7 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:80" target="n:-8:81"/>
+    <node id="n:-8:81">
+      <data key="label">if ran == 2 goto nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(18)</data>
+    </node>
+    <edge source="n:-8:81" target="n:-8:82"/>
+    <edge source="n:-8:81" target="n:-8:86"/>
+    <node id="n:-8:82">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:82" target="n:-8:83"/>
+    <node id="n:-8:83">
+      <data key="label">globalBooleanBBCArray[12] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC8</data>
+    </node>
+    <edge source="n:-8:83" target="n:-8:84"/>
+    <node id="n:-8:84">
+      <data key="label">cc_bool_8 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:84" target="n:-8:85"/>
+    <node id="n:-8:85">
+      <data key="label">goto [?= nop]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(19)</data>
+    </node>
+    <edge source="n:-8:85" target="n:-8:118"/>
+    <node id="n:-8:86">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(20)</data>
+    </node>
+    <edge source="n:-8:86" target="n:-8:87"/>
+    <node id="n:-8:87">
+      <data key="label">temp$2 = *java.lang.System: java.io.PrintStream out*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(21)</data>
+    </node>
+    <edge source="n:-8:87" target="n:-8:88"/>
+    <node id="n:-8:88">
+      <data key="label">temp$3 = new java.lang.StringBuffer</data>
+      <data key="kind">expression</data>
+      <data key="lines">(22)</data>
+    </node>
+    <edge source="n:-8:88" target="n:-8:89"/>
+    <node id="n:-8:89">
+      <data key="label">cc_int_0 = cc_int_0 | 16</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:89" target="n:-8:90"/>
+    <node id="n:-8:90">
+      <data key="label">currBoolean = globalBooleanCCArray[6]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:90" target="n:-8:91"/>
+    <node id="n:-8:91">
+      <data key="label">if currBoolean == 1 goto specialinvoke temp$3.*java.lang.StringBuffer: void *init*()*()</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:91" target="n:-8:92"/>
+    <edge source="n:-8:91" target="n:-8:93"/>
+    <node id="n:-8:92">
+      <data key="label">globalBooleanCCArray[6] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC4</data>
+    </node>
+    <edge source="n:-8:92" target="n:-8:93"/>
+    <node id="n:-8:93">
+      <data key="label">specialinvoke temp$3.*java.lang.StringBuffer: void *init*()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(23)</data>
+    </node>
+    <edge source="n:-8:93" target="n:-14:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-8:93" target="n:-8:94"/>
+    <node id="n:-8:94">
+      <data key="label">cc_int_0 = cc_int_0 | 32</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:94" target="n:-8:95"/>
+    <node id="n:-8:95">
+      <data key="label">currBoolean = globalBooleanCCArray[7]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:95" target="n:-8:96"/>
+    <node id="n:-8:96">
+      <data key="label">if currBoolean == 1 goto virtualinvoke temp$3.*java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)*("Loop Count: ")</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:96" target="n:-8:97"/>
+    <edge source="n:-8:96" target="n:-8:98"/>
+    <node id="n:-8:97">
+      <data key="label">globalBooleanCCArray[7] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC5</data>
+    </node>
+    <edge source="n:-8:97" target="n:-8:98"/>
+    <node id="n:-8:98">
+      <data key="label">virtualinvoke temp$3.*java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)*("Loop Count: ")</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(24)</data>
+    </node>
+    <edge source="n:-8:98" target="n:-15:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-8:98" target="n:-8:99"/>
+    <node id="n:-8:99">
+      <data key="label">cc_int_0 = cc_int_0 | 64</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:99" target="n:-8:100"/>
+    <node id="n:-8:100">
+      <data key="label">currBoolean = globalBooleanCCArray[8]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:100" target="n:-8:101"/>
+    <node id="n:-8:101">
+      <data key="label">if currBoolean == 1 goto virtualinvoke temp$3.*java.lang.StringBuffer: java.lang.StringBuffer append(int)*(i)</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:101" target="n:-8:102"/>
+    <edge source="n:-8:101" target="n:-8:103"/>
+    <node id="n:-8:102">
+      <data key="label">globalBooleanCCArray[8] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC6</data>
+    </node>
+    <edge source="n:-8:102" target="n:-8:103"/>
+    <node id="n:-8:103">
+      <data key="label">virtualinvoke temp$3.*java.lang.StringBuffer: java.lang.StringBuffer append(int)*(i)</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(25)</data>
+    </node>
+    <edge source="n:-8:103" target="n:-16:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-8:103" target="n:-8:104"/>
+    <node id="n:-8:104">
+      <data key="label">cc_int_0 = cc_int_0 | 128</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:104" target="n:-8:105"/>
+    <node id="n:-8:105">
+      <data key="label">currBoolean = globalBooleanCCArray[9]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:105" target="n:-8:106"/>
+    <node id="n:-8:106">
+      <data key="label">if currBoolean == 1 goto temp$4 = virtualinvoke temp$3.*java.lang.StringBuffer: java.lang.String toString()*()</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:106" target="n:-8:107"/>
+    <edge source="n:-8:106" target="n:-8:108"/>
+    <node id="n:-8:107">
+      <data key="label">globalBooleanCCArray[9] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC7</data>
+    </node>
+    <edge source="n:-8:107" target="n:-8:108"/>
+    <node id="n:-8:108">
+      <data key="label">temp$4 = virtualinvoke temp$3.*java.lang.StringBuffer: java.lang.String toString()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(26)</data>
+    </node>
+    <edge source="n:-8:108" target="n:-17:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-8:108" target="n:-8:109"/>
+    <node id="n:-8:109">
+      <data key="label">cc_int_0 = cc_int_0 | 256</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:109" target="n:-8:110"/>
+    <node id="n:-8:110">
+      <data key="label">currBoolean = globalBooleanCCArray[10]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:110" target="n:-8:111"/>
+    <node id="n:-8:111">
+      <data key="label">if currBoolean == 1 goto virtualinvoke temp$2.*java.io.PrintStream: void println(java.lang.String)*(temp$4)</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:111" target="n:-8:112"/>
+    <edge source="n:-8:111" target="n:-8:113"/>
+    <node id="n:-8:112">
+      <data key="label">globalBooleanCCArray[10] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC8</data>
+    </node>
+    <edge source="n:-8:112" target="n:-8:113"/>
+    <node id="n:-8:113">
+      <data key="label">virtualinvoke temp$2.*java.io.PrintStream: void println(java.lang.String)*(temp$4)</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(27)</data>
+    </node>
+    <edge source="n:-8:113" target="n:-18:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-8:113" target="n:-8:114"/>
+    <node id="n:-8:114">
+      <data key="label">temp$5 = 1 / 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(28)</data>
+    </node>
+    <edge source="n:-8:114" target="n:-8:115"/>
+    <node id="n:-8:115">
+      <data key="label">j = temp$5</data>
+      <data key="kind">expression</data>
+      <data key="lines">(29)</data>
+    </node>
+    <edge source="n:-8:115" target="n:-8:116"/>
+    <node id="n:-8:116">
+      <data key="label">globalBooleanBBCArray[13] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC9</data>
+    </node>
+    <edge source="n:-8:116" target="n:-8:117"/>
+    <node id="n:-8:117">
+      <data key="label">cc_bool_9 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:117" target="n:-8:118"/>
+    <node id="n:-8:118">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(30)</data>
+    </node>
+    <edge source="n:-8:118" target="n:-8:119"/>
+    <node id="n:-8:119">
+      <data key="label">globalBooleanBBCArray[14] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC10</data>
+    </node>
+    <edge source="n:-8:119" target="n:-8:120"/>
+    <node id="n:-8:120">
+      <data key="label">cc_bool_10 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:120" target="n:-8:121"/>
+    <node id="n:-8:121">
+      <data key="label">if i == 2147483647 goto nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(31)</data>
+    </node>
+    <edge source="n:-8:121" target="n:-8:122"/>
+    <edge source="n:-8:121" target="n:-8:126"/>
+    <node id="n:-8:122">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:122" target="n:-8:123"/>
+    <node id="n:-8:123">
+      <data key="label">globalBooleanBBCArray[15] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC11</data>
+    </node>
+    <edge source="n:-8:123" target="n:-8:124"/>
+    <node id="n:-8:124">
+      <data key="label">cc_bool_11 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:124" target="n:-8:125"/>
+    <node id="n:-8:125">
+      <data key="label">goto [?= nop]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(32)</data>
+    </node>
+    <edge source="n:-8:125" target="n:-8:130"/>
+    <node id="n:-8:126">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(33)</data>
+    </node>
+    <edge source="n:-8:126" target="n:-8:127"/>
+    <node id="n:-8:127">
+      <data key="label">globalBooleanBBCArray[16] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC12</data>
+    </node>
+    <edge source="n:-8:127" target="n:-8:128"/>
+    <node id="n:-8:128">
+      <data key="label">cc_bool_12 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:128" target="n:-8:129"/>
+    <node id="n:-8:129">
+      <data key="label">goto [?= nop]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(34)</data>
+    </node>
+    <edge source="n:-8:129" target="n:-8:137"/>
+    <node id="n:-8:130">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(35)</data>
+    </node>
+    <edge source="n:-8:130" target="n:-8:131"/>
+    <node id="n:-8:131">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(36)</data>
+    </node>
+    <edge source="n:-8:131" target="n:-8:132"/>
+    <node id="n:-8:132">
+      <data key="label">temp$6 = i + 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(37)</data>
+    </node>
+    <edge source="n:-8:132" target="n:-8:133"/>
+    <node id="n:-8:133">
+      <data key="label">i = temp$6</data>
+      <data key="kind">expression</data>
+      <data key="lines">(38)</data>
+    </node>
+    <edge source="n:-8:133" target="n:-8:134"/>
+    <node id="n:-8:134">
+      <data key="label">globalBooleanBBCArray[17] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC13</data>
+    </node>
+    <edge source="n:-8:134" target="n:-8:135"/>
+    <node id="n:-8:135">
+      <data key="label">cc_bool_13 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:135" target="n:-8:136"/>
+    <node id="n:-8:136">
+      <data key="label">goto [?= nop]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(39)</data>
+    </node>
+    <edge source="n:-8:136" target="n:-8:32"/>
+    <node id="n:-8:137">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(40)</data>
+    </node>
+    <edge source="n:-8:137" target="n:-8:138"/>
+    <node id="n:-8:138">
+      <data key="label">globalBooleanBBCArray[18] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC14</data>
+    </node>
+    <edge source="n:-8:138" target="n:-8:139"/>
+    <node id="n:-8:139">
+      <data key="label">cc_bool_14 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-8:139" target="n:-8:140"/>
+    <node id="n:-8:140">
+      <data key="label">return</data>
+      <data key="kind">expression</data>
+      <data key="lines">(41)</data>
+    </node>
+    <edge source="n:-8:140" target="n:-8:2"/>
+    <node id="n:-8:169">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC0</data>
+    </node>
+    <edge source="n:-8:3" target="n:-8:169"/>
+    <edge source="n:-8:4" target="n:-8:169"/>
+    <edge source="n:-8:5" target="n:-8:169"/>
+    <edge source="n:-8:6" target="n:-8:169"/>
+    <edge source="n:-8:7" target="n:-8:169"/>
+    <edge source="n:-8:8" target="n:-8:169"/>
+    <edge source="n:-8:9" target="n:-8:169"/>
+    <edge source="n:-8:10" target="n:-8:169"/>
+    <edge source="n:-8:11" target="n:-8:169"/>
+    <edge source="n:-8:12" target="n:-8:169"/>
+    <edge source="n:-8:13" target="n:-8:169"/>
+    <edge source="n:-8:14" target="n:-8:169"/>
+    <edge source="n:-8:15" target="n:-8:169"/>
+    <edge source="n:-8:16" target="n:-8:169"/>
+    <edge source="n:-8:17" target="n:-8:169"/>
+    <edge source="n:-8:18" target="n:-8:169"/>
+    <edge source="n:-8:19" target="n:-8:169"/>
+    <edge source="n:-8:20" target="n:-8:169"/>
+    <edge source="n:-8:21" target="n:-8:169"/>
+    <edge source="n:-8:22" target="n:-8:169"/>
+    <edge source="n:-8:23" target="n:-8:169"/>
+    <edge source="n:-8:24" target="n:-8:169"/>
+    <edge source="n:-8:25" target="n:-8:169"/>
+    <edge source="n:-8:26" target="n:-8:169"/>
+    <edge source="n:-8:27" target="n:-8:169"/>
+    <edge source="n:-8:28" target="n:-8:169"/>
+    <edge source="n:-8:29" target="n:-8:169"/>
+    <node id="n:-8:170">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC1</data>
+    </node>
+    <edge source="n:-8:32" target="n:-8:170"/>
+    <edge source="n:-8:33" target="n:-8:170"/>
+    <edge source="n:-8:34" target="n:-8:170"/>
+    <edge source="n:-8:35" target="n:-8:170"/>
+    <node id="n:-8:171">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC2</data>
+    </node>
+    <edge source="n:-8:36" target="n:-8:171"/>
+    <node id="n:-8:172">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC3</data>
+    </node>
+    <edge source="n:-8:39" target="n:-8:172"/>
+    <node id="n:-8:173">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC4</data>
+    </node>
+    <edge source="n:-8:46" target="n:-8:173"/>
+    <node id="n:-8:174">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC5</data>
+    </node>
+    <edge source="n:-8:52" target="n:-8:174"/>
+    <node id="n:-8:175">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC6</data>
+    </node>
+    <edge source="n:-8:53" target="n:-8:175"/>
+    <edge source="n:-8:54" target="n:-8:175"/>
+    <edge source="n:-8:55" target="n:-8:175"/>
+    <edge source="n:-8:56" target="n:-8:175"/>
+    <edge source="n:-8:57" target="n:-8:175"/>
+    <edge source="n:-8:58" target="n:-8:175"/>
+    <edge source="n:-8:59" target="n:-8:175"/>
+    <edge source="n:-8:60" target="n:-8:175"/>
+    <edge source="n:-8:61" target="n:-8:175"/>
+    <edge source="n:-8:62" target="n:-8:175"/>
+    <edge source="n:-8:63" target="n:-8:175"/>
+    <edge source="n:-8:64" target="n:-8:175"/>
+    <edge source="n:-8:65" target="n:-8:175"/>
+    <node id="n:-8:176">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC7</data>
+    </node>
+    <edge source="n:-8:66" target="n:-8:176"/>
+    <edge source="n:-8:67" target="n:-8:176"/>
+    <edge source="n:-8:68" target="n:-8:176"/>
+    <edge source="n:-8:69" target="n:-8:176"/>
+    <edge source="n:-8:70" target="n:-8:176"/>
+    <edge source="n:-8:71" target="n:-8:176"/>
+    <edge source="n:-8:72" target="n:-8:176"/>
+    <edge source="n:-8:73" target="n:-8:176"/>
+    <edge source="n:-8:74" target="n:-8:176"/>
+    <edge source="n:-8:75" target="n:-8:176"/>
+    <edge source="n:-8:76" target="n:-8:176"/>
+    <edge source="n:-8:77" target="n:-8:176"/>
+    <edge source="n:-8:78" target="n:-8:176"/>
+    <edge source="n:-8:79" target="n:-8:176"/>
+    <edge source="n:-8:80" target="n:-8:176"/>
+    <edge source="n:-8:81" target="n:-8:176"/>
+    <node id="n:-8:177">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC8</data>
+    </node>
+    <edge source="n:-8:85" target="n:-8:177"/>
+    <node id="n:-8:178">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC9</data>
+    </node>
+    <edge source="n:-8:86" target="n:-8:178"/>
+    <edge source="n:-8:87" target="n:-8:178"/>
+    <edge source="n:-8:88" target="n:-8:178"/>
+    <edge source="n:-8:89" target="n:-8:178"/>
+    <edge source="n:-8:90" target="n:-8:178"/>
+    <edge source="n:-8:91" target="n:-8:178"/>
+    <edge source="n:-8:92" target="n:-8:178"/>
+    <edge source="n:-8:93" target="n:-8:178"/>
+    <edge source="n:-8:94" target="n:-8:178"/>
+    <edge source="n:-8:95" target="n:-8:178"/>
+    <edge source="n:-8:96" target="n:-8:178"/>
+    <edge source="n:-8:97" target="n:-8:178"/>
+    <edge source="n:-8:98" target="n:-8:178"/>
+    <edge source="n:-8:99" target="n:-8:178"/>
+    <edge source="n:-8:100" target="n:-8:178"/>
+    <edge source="n:-8:101" target="n:-8:178"/>
+    <edge source="n:-8:102" target="n:-8:178"/>
+    <edge source="n:-8:103" target="n:-8:178"/>
+    <edge source="n:-8:104" target="n:-8:178"/>
+    <edge source="n:-8:105" target="n:-8:178"/>
+    <edge source="n:-8:106" target="n:-8:178"/>
+    <edge source="n:-8:107" target="n:-8:178"/>
+    <edge source="n:-8:108" target="n:-8:178"/>
+    <edge source="n:-8:109" target="n:-8:178"/>
+    <edge source="n:-8:110" target="n:-8:178"/>
+    <edge source="n:-8:111" target="n:-8:178"/>
+    <edge source="n:-8:112" target="n:-8:178"/>
+    <edge source="n:-8:113" target="n:-8:178"/>
+    <edge source="n:-8:114" target="n:-8:178"/>
+    <edge source="n:-8:115" target="n:-8:178"/>
+    <node id="n:-8:179">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC10</data>
+    </node>
+    <edge source="n:-8:118" target="n:-8:179"/>
+    <edge source="n:-8:119" target="n:-8:179"/>
+    <edge source="n:-8:120" target="n:-8:179"/>
+    <edge source="n:-8:121" target="n:-8:179"/>
+    <node id="n:-8:180">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC11</data>
+    </node>
+    <edge source="n:-8:125" target="n:-8:180"/>
+    <node id="n:-8:181">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC12</data>
+    </node>
+    <edge source="n:-8:126" target="n:-8:181"/>
+    <edge source="n:-8:127" target="n:-8:181"/>
+    <edge source="n:-8:128" target="n:-8:181"/>
+    <edge source="n:-8:129" target="n:-8:181"/>
+    <node id="n:-8:182">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC13</data>
+    </node>
+    <edge source="n:-8:130" target="n:-8:182"/>
+    <edge source="n:-8:131" target="n:-8:182"/>
+    <edge source="n:-8:132" target="n:-8:182"/>
+    <edge source="n:-8:133" target="n:-8:182"/>
+    <edge source="n:-8:134" target="n:-8:182"/>
+    <edge source="n:-8:135" target="n:-8:182"/>
+    <edge source="n:-8:136" target="n:-8:182"/>
+    <node id="n:-8:183">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC14</data>
+    </node>
+    <edge source="n:-8:137" target="n:-8:183"/>
+    <edge source="n:-8:138" target="n:-8:183"/>
+    <edge source="n:-8:139" target="n:-8:183"/>
+    <edge source="n:-8:140" target="n:-8:183"/>
+    <node id="n:-13:1">
+      <data key="label">entry: randInt</data>
+      <data key="kind">entry</data>
+      <data key="file">cs.wisc.test.Buggy.java</data>
+      <data key="procedure">cs.wisc.test.Buggy@ int randInt(int,int)</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-13:1" target="n:-13:3"/>
+    <node id="n:-13:2">
+      <data key="label">exit: randInt</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-13:3">
+      <data key="label">this := @this: cs.wisc.test.Buggy</data>
+      <data key="kind">expression</data>
+      <data key="lines">(0)</data>
+    </node>
+    <edge source="n:-13:3" target="n:-13:4"/>
+    <node id="n:-13:4">
+      <data key="label">min := @parameter0: int</data>
+      <data key="kind">expression</data>
+      <data key="lines">(1)</data>
+    </node>
+    <edge source="n:-13:4" target="n:-13:5"/>
+    <node id="n:-13:5">
+      <data key="label">max := @parameter1: int</data>
+      <data key="kind">expression</data>
+      <data key="lines">(2)</data>
+    </node>
+    <edge source="n:-13:5" target="n:-13:6"/>
+    <node id="n:-13:6">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-13:6" target="n:-13:7"/>
+    <node id="n:-13:7">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-13:7" target="n:-13:8"/>
+    <node id="n:-13:8">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-13:8" target="n:-13:9"/>
+    <node id="n:-13:9">
+      <data key="label">globalBooleanCCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBooleanCallCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-13:9" target="n:-13:10"/>
+    <node id="n:-13:10">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-13:10" target="n:-13:11"/>
+    <node id="n:-13:11">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-13:11" target="n:-13:12"/>
+    <node id="n:-13:12">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-13:12" target="n:-13:13"/>
+    <node id="n:-13:13">
+      <data key="label">globalBooleanBBCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBBCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-13:13" target="n:-13:14"/>
+    <node id="n:-13:14">
+      <data key="label">globalBooleanFCArray = *uwmadison.soot.analysis.Trace: boolean[] globalFunctionCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-13:14" target="n:-13:15"/>
+    <node id="n:-13:15">
+      <data key="label">globalBooleanFCArray[5] = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-13:15" target="n:-13:16"/>
+    <node id="n:-13:16">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-13:16" target="n:-13:17"/>
+    <node id="n:-13:17">
+      <data key="label">temp$0 = this.*cs.wisc.test.Buggy: java.util.Random rand*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(3)</data>
+    </node>
+    <edge source="n:-13:17" target="n:-13:18"/>
+    <node id="n:-13:18">
+      <data key="label">temp$1 = max - min</data>
+      <data key="kind">expression</data>
+      <data key="lines">(4)</data>
+    </node>
+    <edge source="n:-13:18" target="n:-13:19"/>
+    <node id="n:-13:19">
+      <data key="label">temp$2 = temp$1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(5)</data>
+    </node>
+    <edge source="n:-13:19" target="n:-13:20"/>
+    <node id="n:-13:20">
+      <data key="label">temp$3 = temp$2 + 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(6)</data>
+    </node>
+    <edge source="n:-13:20" target="n:-13:21"/>
+    <node id="n:-13:21">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-13:21" target="n:-13:22"/>
+    <node id="n:-13:22">
+      <data key="label">currBoolean = globalBooleanCCArray[11]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-13:22" target="n:-13:23"/>
+    <node id="n:-13:23">
+      <data key="label">if currBoolean == 1 goto temp$4 = virtualinvoke temp$0.*java.util.Random: int nextInt(int)*(temp$3)</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-13:23" target="n:-13:24"/>
+    <edge source="n:-13:23" target="n:-13:25"/>
+    <node id="n:-13:24">
+      <data key="label">globalBooleanCCArray[11] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC0</data>
+    </node>
+    <edge source="n:-13:24" target="n:-13:25"/>
+    <node id="n:-13:25">
+      <data key="label">temp$4 = virtualinvoke temp$0.*java.util.Random: int nextInt(int)*(temp$3)</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(7)</data>
+    </node>
+    <edge source="n:-13:25" target="n:-19:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-13:25" target="n:-13:26"/>
+    <node id="n:-13:26">
+      <data key="label">temp$5 = temp$4</data>
+      <data key="kind">expression</data>
+      <data key="lines">(8)</data>
+    </node>
+    <edge source="n:-13:26" target="n:-13:27"/>
+    <node id="n:-13:27">
+      <data key="label">randomNum = temp$5 + min</data>
+      <data key="kind">expression</data>
+      <data key="lines">(9)</data>
+    </node>
+    <edge source="n:-13:27" target="n:-13:28"/>
+    <node id="n:-13:28">
+      <data key="label">globalBooleanBBCArray[19] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC0</data>
+    </node>
+    <edge source="n:-13:28" target="n:-13:29"/>
+    <node id="n:-13:29">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-13:29" target="n:-13:30"/>
+    <node id="n:-13:30">
+      <data key="label">return randomNum</data>
+      <data key="kind">expression</data>
+      <data key="lines">(10)</data>
+    </node>
+    <edge source="n:-13:30" target="n:-13:2"/>
+    <node id="n:-13:45">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC0</data>
+    </node>
+    <edge source="n:-13:3" target="n:-13:45"/>
+    <edge source="n:-13:4" target="n:-13:45"/>
+    <edge source="n:-13:5" target="n:-13:45"/>
+    <edge source="n:-13:6" target="n:-13:45"/>
+    <edge source="n:-13:7" target="n:-13:45"/>
+    <edge source="n:-13:8" target="n:-13:45"/>
+    <edge source="n:-13:9" target="n:-13:45"/>
+    <edge source="n:-13:10" target="n:-13:45"/>
+    <edge source="n:-13:11" target="n:-13:45"/>
+    <edge source="n:-13:12" target="n:-13:45"/>
+    <edge source="n:-13:13" target="n:-13:45"/>
+    <edge source="n:-13:14" target="n:-13:45"/>
+    <edge source="n:-13:15" target="n:-13:45"/>
+    <edge source="n:-13:16" target="n:-13:45"/>
+    <edge source="n:-13:17" target="n:-13:45"/>
+    <edge source="n:-13:18" target="n:-13:45"/>
+    <edge source="n:-13:19" target="n:-13:45"/>
+    <edge source="n:-13:20" target="n:-13:45"/>
+    <edge source="n:-13:21" target="n:-13:45"/>
+    <edge source="n:-13:22" target="n:-13:45"/>
+    <edge source="n:-13:23" target="n:-13:45"/>
+    <edge source="n:-13:24" target="n:-13:45"/>
+    <edge source="n:-13:25" target="n:-13:45"/>
+    <edge source="n:-13:26" target="n:-13:45"/>
+    <edge source="n:-13:27" target="n:-13:45"/>
+    <edge source="n:-13:28" target="n:-13:45"/>
+    <edge source="n:-13:29" target="n:-13:45"/>
+    <edge source="n:-13:30" target="n:-13:45"/>
+    <node id="n:-20:1">
+      <data key="label">entry: *init*</data>
+      <data key="kind">entry</data>
+      <data key="file">cs.wisc.test.Buggy.java</data>
+      <data key="procedure">cs.wisc.test.Buggy@ void *init*()</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-20:1" target="n:-20:3"/>
+    <node id="n:-20:2">
+      <data key="label">exit: *init*</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-20:3">
+      <data key="label">this := @this: cs.wisc.test.Buggy</data>
+      <data key="kind">expression</data>
+      <data key="lines">(0)</data>
+    </node>
+    <edge source="n:-20:3" target="n:-20:4"/>
+    <node id="n:-20:4">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:4" target="n:-20:5"/>
+    <node id="n:-20:5">
+      <data key="label">cc_bool_1 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:5" target="n:-20:6"/>
+    <node id="n:-20:6">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:6" target="n:-20:7"/>
+    <node id="n:-20:7">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:7" target="n:-20:8"/>
+    <node id="n:-20:8">
+      <data key="label">globalBooleanCCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBooleanCallCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:8" target="n:-20:9"/>
+    <node id="n:-20:9">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:9" target="n:-20:10"/>
+    <node id="n:-20:10">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:10" target="n:-20:11"/>
+    <node id="n:-20:11">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:11" target="n:-20:12"/>
+    <node id="n:-20:12">
+      <data key="label">globalBooleanBBCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBBCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:12" target="n:-20:13"/>
+    <node id="n:-20:13">
+      <data key="label">globalBooleanFCArray = *uwmadison.soot.analysis.Trace: boolean[] globalFunctionCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:13" target="n:-20:14"/>
+    <node id="n:-20:14">
+      <data key="label">globalBooleanFCArray[6] = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:14" target="n:-20:15"/>
+    <node id="n:-20:15">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:15" target="n:-20:16"/>
+    <node id="n:-20:16">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:16" target="n:-20:17"/>
+    <node id="n:-20:17">
+      <data key="label">currBoolean = globalBooleanCCArray[12]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:17" target="n:-20:18"/>
+    <node id="n:-20:18">
+      <data key="label">if currBoolean == 1 goto specialinvoke this.*java.lang.Object: void *init*()*()</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:18" target="n:-20:19"/>
+    <edge source="n:-20:18" target="n:-20:20"/>
+    <node id="n:-20:19">
+      <data key="label">globalBooleanCCArray[12] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC0</data>
+    </node>
+    <edge source="n:-20:19" target="n:-20:20"/>
+    <node id="n:-20:20">
+      <data key="label">specialinvoke this.*java.lang.Object: void *init*()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(1)</data>
+    </node>
+    <edge source="n:-20:20" target="n:-21:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-20:20" target="n:-20:21"/>
+    <node id="n:-20:21">
+      <data key="label">temp$0 = new java.util.Random</data>
+      <data key="kind">expression</data>
+      <data key="lines">(2)</data>
+    </node>
+    <edge source="n:-20:21" target="n:-20:22"/>
+    <node id="n:-20:22">
+      <data key="label">cc_bool_1 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:22" target="n:-20:23"/>
+    <node id="n:-20:23">
+      <data key="label">currBoolean = globalBooleanCCArray[13]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:23" target="n:-20:24"/>
+    <node id="n:-20:24">
+      <data key="label">if currBoolean == 1 goto specialinvoke temp$0.*java.util.Random: void *init*()*()</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:24" target="n:-20:25"/>
+    <edge source="n:-20:24" target="n:-20:26"/>
+    <node id="n:-20:25">
+      <data key="label">globalBooleanCCArray[13] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC1</data>
+    </node>
+    <edge source="n:-20:25" target="n:-20:26"/>
+    <node id="n:-20:26">
+      <data key="label">specialinvoke temp$0.*java.util.Random: void *init*()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(3)</data>
+    </node>
+    <edge source="n:-20:26" target="n:-3:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-20:26" target="n:-20:27"/>
+    <node id="n:-20:27">
+      <data key="label">this.*cs.wisc.test.Buggy: java.util.Random rand* = temp$0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(4)</data>
+    </node>
+    <edge source="n:-20:27" target="n:-20:28"/>
+    <node id="n:-20:28">
+      <data key="label">globalBooleanBBCArray[20] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC0</data>
+    </node>
+    <edge source="n:-20:28" target="n:-20:29"/>
+    <node id="n:-20:29">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-20:29" target="n:-20:30"/>
+    <node id="n:-20:30">
+      <data key="label">return</data>
+      <data key="kind">expression</data>
+      <data key="lines">(5)</data>
+    </node>
+    <edge source="n:-20:30" target="n:-20:2"/>
+    <node id="n:-20:46">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC0</data>
+    </node>
+    <edge source="n:-20:3" target="n:-20:46"/>
+    <edge source="n:-20:4" target="n:-20:46"/>
+    <edge source="n:-20:5" target="n:-20:46"/>
+    <edge source="n:-20:6" target="n:-20:46"/>
+    <edge source="n:-20:7" target="n:-20:46"/>
+    <edge source="n:-20:8" target="n:-20:46"/>
+    <edge source="n:-20:9" target="n:-20:46"/>
+    <edge source="n:-20:10" target="n:-20:46"/>
+    <edge source="n:-20:11" target="n:-20:46"/>
+    <edge source="n:-20:12" target="n:-20:46"/>
+    <edge source="n:-20:13" target="n:-20:46"/>
+    <edge source="n:-20:14" target="n:-20:46"/>
+    <edge source="n:-20:15" target="n:-20:46"/>
+    <edge source="n:-20:16" target="n:-20:46"/>
+    <edge source="n:-20:17" target="n:-20:46"/>
+    <edge source="n:-20:18" target="n:-20:46"/>
+    <edge source="n:-20:19" target="n:-20:46"/>
+    <edge source="n:-20:20" target="n:-20:46"/>
+    <edge source="n:-20:21" target="n:-20:46"/>
+    <edge source="n:-20:22" target="n:-20:46"/>
+    <edge source="n:-20:23" target="n:-20:46"/>
+    <edge source="n:-20:24" target="n:-20:46"/>
+    <edge source="n:-20:25" target="n:-20:46"/>
+    <edge source="n:-20:26" target="n:-20:46"/>
+    <edge source="n:-20:27" target="n:-20:46"/>
+    <edge source="n:-20:28" target="n:-20:46"/>
+    <edge source="n:-20:29" target="n:-20:46"/>
+    <edge source="n:-20:30" target="n:-20:46"/>
+    <node id="n:-1:1">
+      <data key="label">entry: main</data>
+      <data key="kind">entry</data>
+      <data key="file">cs.wisc.test.Main.java</data>
+      <data key="procedure">cs.wisc.test.Main@ void main(java.lang.String[])</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-1:1" target="n:-1:3"/>
+    <node id="n:-1:2">
+      <data key="label">exit: main</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-1:3">
+      <data key="label">args := @parameter0: java.lang.String[]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(0)</data>
+    </node>
+    <edge source="n:-1:3" target="n:-1:4"/>
+    <node id="n:-1:4">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:4" target="n:-1:5"/>
+    <node id="n:-1:5">
+      <data key="label">cc_bool_1 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:5" target="n:-1:6"/>
+    <node id="n:-1:6">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:6" target="n:-1:7"/>
+    <node id="n:-1:7">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:7" target="n:-1:8"/>
+    <node id="n:-1:8">
+      <data key="label">globalBooleanCCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBooleanCallCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:8" target="n:-1:9"/>
+    <node id="n:-1:9">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:9" target="n:-1:10"/>
+    <node id="n:-1:10">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:10" target="n:-1:11"/>
+    <node id="n:-1:11">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:11" target="n:-1:12"/>
+    <node id="n:-1:12">
+      <data key="label">globalBooleanBBCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBBCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:12" target="n:-1:13"/>
+    <node id="n:-1:13">
+      <data key="label">globalBooleanFCArray = *uwmadison.soot.analysis.Trace: boolean[] globalFunctionCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:13" target="n:-1:14"/>
+    <node id="n:-1:14">
+      <data key="label">globalBooleanFCArray[7] = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:14" target="n:-1:15"/>
+    <node id="n:-1:15">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:15" target="n:-1:16"/>
+    <node id="n:-1:16">
+      <data key="label">temp$0 = new cs.wisc.test.Buggy</data>
+      <data key="kind">expression</data>
+      <data key="lines">(1)</data>
+    </node>
+    <edge source="n:-1:16" target="n:-1:17"/>
+    <node id="n:-1:17">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:17" target="n:-1:18"/>
+    <node id="n:-1:18">
+      <data key="label">currBoolean = globalBooleanCCArray[14]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:18" target="n:-1:19"/>
+    <node id="n:-1:19">
+      <data key="label">if currBoolean == 1 goto specialinvoke temp$0.*cs.wisc.test.Buggy: void *init*()*()</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:19" target="n:-1:20"/>
+    <edge source="n:-1:19" target="n:-1:21"/>
+    <node id="n:-1:20">
+      <data key="label">globalBooleanCCArray[14] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC0</data>
+    </node>
+    <edge source="n:-1:20" target="n:-1:21"/>
+    <node id="n:-1:21">
+      <data key="label">specialinvoke temp$0.*cs.wisc.test.Buggy: void *init*()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(2)</data>
+    </node>
+    <edge source="n:-1:21" target="n:-20:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-1:21" target="n:-1:22"/>
+    <node id="n:-1:22">
+      <data key="label">buggy = temp$0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(3)</data>
+    </node>
+    <edge source="n:-1:22" target="n:-1:23"/>
+    <node id="n:-1:23">
+      <data key="label">cc_bool_1 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:23" target="n:-1:24"/>
+    <node id="n:-1:24">
+      <data key="label">currBoolean = globalBooleanCCArray[15]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:24" target="n:-1:25"/>
+    <node id="n:-1:25">
+      <data key="label">if currBoolean == 1 goto virtualinvoke buggy.*cs.wisc.test.Buggy: void run()*()</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:25" target="n:-1:26"/>
+    <edge source="n:-1:25" target="n:-1:27"/>
+    <node id="n:-1:26">
+      <data key="label">globalBooleanCCArray[15] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC1</data>
+    </node>
+    <edge source="n:-1:26" target="n:-1:27"/>
+    <node id="n:-1:27">
+      <data key="label">virtualinvoke buggy.*cs.wisc.test.Buggy: void run()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(4)</data>
+    </node>
+    <edge source="n:-1:27" target="n:-8:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-1:27" target="n:-1:28"/>
+    <node id="n:-1:28">
+      <data key="label">globalBooleanBBCArray[21] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC0</data>
+    </node>
+    <edge source="n:-1:28" target="n:-1:29"/>
+    <node id="n:-1:29">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:29" target="n:-1:30"/>
+    <node id="n:-1:30">
+      <data key="label">return</data>
+      <data key="kind">expression</data>
+      <data key="lines">(5)</data>
+    </node>
+    <edge source="n:-1:30" target="n:-1:2"/>
+    <node id="n:-1:47">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC0</data>
+    </node>
+    <edge source="n:-1:3" target="n:-1:47"/>
+    <edge source="n:-1:4" target="n:-1:47"/>
+    <edge source="n:-1:5" target="n:-1:47"/>
+    <edge source="n:-1:6" target="n:-1:47"/>
+    <edge source="n:-1:7" target="n:-1:47"/>
+    <edge source="n:-1:8" target="n:-1:47"/>
+    <edge source="n:-1:9" target="n:-1:47"/>
+    <edge source="n:-1:10" target="n:-1:47"/>
+    <edge source="n:-1:11" target="n:-1:47"/>
+    <edge source="n:-1:12" target="n:-1:47"/>
+    <edge source="n:-1:13" target="n:-1:47"/>
+    <edge source="n:-1:14" target="n:-1:47"/>
+    <edge source="n:-1:15" target="n:-1:47"/>
+    <edge source="n:-1:16" target="n:-1:47"/>
+    <edge source="n:-1:17" target="n:-1:47"/>
+    <edge source="n:-1:18" target="n:-1:47"/>
+    <edge source="n:-1:19" target="n:-1:47"/>
+    <edge source="n:-1:20" target="n:-1:47"/>
+    <edge source="n:-1:21" target="n:-1:47"/>
+    <edge source="n:-1:22" target="n:-1:47"/>
+    <edge source="n:-1:23" target="n:-1:47"/>
+    <edge source="n:-1:24" target="n:-1:47"/>
+    <edge source="n:-1:25" target="n:-1:47"/>
+    <edge source="n:-1:26" target="n:-1:47"/>
+    <edge source="n:-1:27" target="n:-1:47"/>
+    <edge source="n:-1:28" target="n:-1:47"/>
+    <edge source="n:-1:29" target="n:-1:47"/>
+    <edge source="n:-1:30" target="n:-1:47"/>
+    <node id="n:-22:1">
+      <data key="label">entry: startFOPWithDynamicClasspath</data>
+      <data key="kind">entry</data>
+      <data key="file">cs.wisc.test.Main.java</data>
+      <data key="procedure">cs.wisc.test.Main@ void startFOPWithDynamicClasspath(java.lang.String[])</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-22:1" target="n:-22:3"/>
+    <node id="n:-22:2">
+      <data key="label">exit: startFOPWithDynamicClasspath</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-22:3">
+      <data key="label">args := @parameter0: java.lang.String[]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(0)</data>
+    </node>
+    <edge source="n:-22:3" target="n:-22:4"/>
+    <node id="n:-22:4">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:4" target="n:-22:5"/>
+    <node id="n:-22:5">
+      <data key="label">cc_bool_1 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:5" target="n:-22:6"/>
+    <node id="n:-22:6">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:6" target="n:-22:7"/>
+    <node id="n:-22:7">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:7" target="n:-22:8"/>
+    <node id="n:-22:8">
+      <data key="label">globalBooleanCCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBooleanCallCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:8" target="n:-22:9"/>
+    <node id="n:-22:9">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:9" target="n:-22:10"/>
+    <node id="n:-22:10">
+      <data key="label">cc_bool_1 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:10" target="n:-22:11"/>
+    <node id="n:-22:11">
+      <data key="label">cc_bool_2 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:11" target="n:-22:12"/>
+    <node id="n:-22:12">
+      <data key="label">cc_bool_3 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:12" target="n:-22:13"/>
+    <node id="n:-22:13">
+      <data key="label">cc_bool_4 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:13" target="n:-22:14"/>
+    <node id="n:-22:14">
+      <data key="label">cc_bool_5 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:14" target="n:-22:15"/>
+    <node id="n:-22:15">
+      <data key="label">cc_bool_6 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:15" target="n:-22:16"/>
+    <node id="n:-22:16">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:16" target="n:-22:17"/>
+    <node id="n:-22:17">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:17" target="n:-22:18"/>
+    <node id="n:-22:18">
+      <data key="label">globalBooleanBBCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBBCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:18" target="n:-22:42"/>
+    <edge source="n:-22:18" target="n:-22:19"/>
+    <node id="n:-22:19">
+      <data key="label">globalBooleanFCArray = *uwmadison.soot.analysis.Trace: boolean[] globalFunctionCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:19" target="n:-22:42"/>
+    <edge source="n:-22:19" target="n:-22:20"/>
+    <node id="n:-22:20">
+      <data key="label">globalBooleanFCArray[8] = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:20" target="n:-22:42"/>
+    <edge source="n:-22:20" target="n:-22:21"/>
+    <node id="n:-22:21">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:21" target="n:-22:42"/>
+    <edge source="n:-22:21" target="n:-22:22"/>
+    <node id="n:-22:22">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(1)</data>
+    </node>
+    <edge source="n:-22:22" target="n:-22:42"/>
+    <edge source="n:-22:22" target="n:-22:23"/>
+    <node id="n:-22:23">
+      <data key="label">globalBooleanBBCArray[22] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC0</data>
+    </node>
+    <edge source="n:-22:23" target="n:-22:42"/>
+    <edge source="n:-22:23" target="n:-22:24"/>
+    <node id="n:-22:24">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:24" target="n:-22:42"/>
+    <edge source="n:-22:24" target="n:-22:25"/>
+    <node id="n:-22:25">
+      <data key="label">temp$0 = new java.net.URLClassLoader</data>
+      <data key="kind">expression</data>
+      <data key="lines">(2)</data>
+    </node>
+    <edge source="n:-22:25" target="n:-22:42"/>
+    <edge source="n:-22:25" target="n:-22:26"/>
+    <node id="n:-22:26">
+      <data key="label">globalBooleanBBCArray[23] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC1</data>
+    </node>
+    <edge source="n:-22:26" target="n:-22:42"/>
+    <edge source="n:-22:26" target="n:-22:27"/>
+    <node id="n:-22:27">
+      <data key="label">cc_bool_1 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:27" target="n:-22:42"/>
+    <edge source="n:-22:27" target="n:-22:28"/>
+    <node id="n:-22:28">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:28" target="n:-22:42"/>
+    <edge source="n:-22:28" target="n:-22:29"/>
+    <node id="n:-22:29">
+      <data key="label">currBoolean = globalBooleanCCArray[16]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:29" target="n:-22:42"/>
+    <edge source="n:-22:29" target="n:-22:30"/>
+    <node id="n:-22:30">
+      <data key="label">if currBoolean == 1 goto specialinvoke temp$0.*java.net.URLClassLoader: void *init*(java.net.URL[],java.lang.ClassLoader)*(null, null)</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:30" target="n:-22:31"/>
+    <edge source="n:-22:30" target="n:-22:32"/>
+    <edge source="n:-22:30" target="n:-22:42"/>
+    <node id="n:-22:31">
+      <data key="label">globalBooleanCCArray[16] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC0</data>
+    </node>
+    <edge source="n:-22:31" target="n:-22:42"/>
+    <edge source="n:-22:31" target="n:-22:32"/>
+    <node id="n:-22:32">
+      <data key="label">specialinvoke temp$0.*java.net.URLClassLoader: void *init*(java.net.URL[],java.lang.ClassLoader)*(null, null)</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(3)</data>
+    </node>
+    <edge source="n:-22:32" target="n:-23:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-22:32" target="n:-22:42"/>
+    <edge source="n:-22:32" target="n:-22:33"/>
+    <node id="n:-22:33">
+      <data key="label">globalBooleanBBCArray[24] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC2</data>
+    </node>
+    <edge source="n:-22:33" target="n:-22:42"/>
+    <edge source="n:-22:33" target="n:-22:34"/>
+    <node id="n:-22:34">
+      <data key="label">cc_bool_2 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:34" target="n:-22:42"/>
+    <edge source="n:-22:34" target="n:-22:35"/>
+    <node id="n:-22:35">
+      <data key="label">loader = temp$0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(4)</data>
+    </node>
+    <edge source="n:-22:35" target="n:-22:42"/>
+    <edge source="n:-22:35" target="n:-22:36"/>
+    <node id="n:-22:36">
+      <data key="label">globalBooleanBBCArray[25] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC3</data>
+    </node>
+    <edge source="n:-22:36" target="n:-22:42"/>
+    <edge source="n:-22:36" target="n:-22:37"/>
+    <node id="n:-22:37">
+      <data key="label">cc_bool_3 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:37" target="n:-22:42"/>
+    <edge source="n:-22:37" target="n:-22:38"/>
+    <node id="n:-22:38">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:38" target="n:-22:42"/>
+    <edge source="n:-22:38" target="n:-22:39"/>
+    <node id="n:-22:39">
+      <data key="label">globalBooleanBBCArray[26] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC4</data>
+    </node>
+    <edge source="n:-22:39" target="n:-22:42"/>
+    <edge source="n:-22:39" target="n:-22:40"/>
+    <node id="n:-22:40">
+      <data key="label">cc_bool_4 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:40" target="n:-22:42"/>
+    <edge source="n:-22:40" target="n:-22:41"/>
+    <node id="n:-22:41">
+      <data key="label">goto [?= nop]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(5)</data>
+    </node>
+    <edge source="n:-22:41" target="n:-22:42"/>
+    <edge source="n:-22:41" target="n:-22:56"/>
+    <node id="n:-22:42">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(6)</data>
+    </node>
+    <edge source="n:-22:42" target="n:-22:43"/>
+    <node id="n:-22:43">
+      <data key="label">e := @caughtexception</data>
+      <data key="kind">expression</data>
+      <data key="lines">(7)</data>
+    </node>
+    <edge source="n:-22:43" target="n:-22:44"/>
+    <node id="n:-22:44">
+      <data key="label">staticinvoke *uwmadison.soot.analysis.Trace: void freeBBCStack()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:44" target="n:-10:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-22:44" target="n:-22:45"/>
+    <node id="n:-22:45">
+      <data key="label">staticinvoke *uwmadison.soot.analysis.Trace: void freeCCStack()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:45" target="n:-11:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-22:45" target="n:-22:46"/>
+    <node id="n:-22:46">
+      <data key="label">temp$1 = *java.lang.System: java.io.PrintStream err*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(8)</data>
+    </node>
+    <edge source="n:-22:46" target="n:-22:47"/>
+    <node id="n:-22:47">
+      <data key="label">cc_bool_1 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:47" target="n:-22:48"/>
+    <node id="n:-22:48">
+      <data key="label">currBoolean = globalBooleanCCArray[17]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:48" target="n:-22:49"/>
+    <node id="n:-22:49">
+      <data key="label">if currBoolean == 1 goto virtualinvoke temp$1.*java.io.PrintStream: void println(java.lang.String)*("Unable to start FOP:")</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:49" target="n:-22:50"/>
+    <edge source="n:-22:49" target="n:-22:51"/>
+    <node id="n:-22:50">
+      <data key="label">globalBooleanCCArray[17] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC1</data>
+    </node>
+    <edge source="n:-22:50" target="n:-22:51"/>
+    <node id="n:-22:51">
+      <data key="label">virtualinvoke temp$1.*java.io.PrintStream: void println(java.lang.String)*("Unable to start FOP:")</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(9)</data>
+    </node>
+    <edge source="n:-22:51" target="n:-18:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-22:51" target="n:-22:52"/>
+    <node id="n:-22:52">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(10)</data>
+    </node>
+    <edge source="n:-22:52" target="n:-22:53"/>
+    <node id="n:-22:53">
+      <data key="label">globalBooleanBBCArray[27] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC5</data>
+    </node>
+    <edge source="n:-22:53" target="n:-22:54"/>
+    <node id="n:-22:54">
+      <data key="label">cc_bool_5 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:54" target="n:-22:55"/>
+    <node id="n:-22:55">
+      <data key="label">goto [?= nop]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(11)</data>
+    </node>
+    <edge source="n:-22:55" target="n:-22:56"/>
+    <node id="n:-22:56">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(12)</data>
+    </node>
+    <edge source="n:-22:56" target="n:-22:57"/>
+    <node id="n:-22:57">
+      <data key="label">globalBooleanBBCArray[28] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC6</data>
+    </node>
+    <edge source="n:-22:57" target="n:-22:58"/>
+    <node id="n:-22:58">
+      <data key="label">cc_bool_6 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-22:58" target="n:-22:59"/>
+    <node id="n:-22:59">
+      <data key="label">return</data>
+      <data key="kind">expression</data>
+      <data key="lines">(13)</data>
+    </node>
+    <edge source="n:-22:59" target="n:-22:2"/>
+    <node id="n:-22:81">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC0</data>
+    </node>
+    <edge source="n:-22:3" target="n:-22:81"/>
+    <node id="n:-22:82">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC1</data>
+    </node>
+    <edge source="n:-22:21" target="n:-22:82"/>
+    <node id="n:-22:83">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC2</data>
+    </node>
+    <edge source="n:-22:22" target="n:-22:83"/>
+    <node id="n:-22:84">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC3</data>
+    </node>
+    <edge source="n:-22:25" target="n:-22:84"/>
+    <node id="n:-22:85">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC4</data>
+    </node>
+    <edge source="n:-22:32" target="n:-22:85"/>
+    <node id="n:-22:86">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC5</data>
+    </node>
+    <edge source="n:-22:35" target="n:-22:86"/>
+    <node id="n:-22:87">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC6</data>
+    </node>
+    <edge source="n:-22:41" target="n:-22:87"/>
+    <node id="n:-22:88">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC7</data>
+    </node>
+    <edge source="n:-22:42" target="n:-22:88"/>
+    <edge source="n:-22:43" target="n:-22:88"/>
+    <edge source="n:-22:44" target="n:-22:88"/>
+    <edge source="n:-22:45" target="n:-22:88"/>
+    <edge source="n:-22:46" target="n:-22:88"/>
+    <edge source="n:-22:47" target="n:-22:88"/>
+    <edge source="n:-22:48" target="n:-22:88"/>
+    <edge source="n:-22:49" target="n:-22:88"/>
+    <edge source="n:-22:50" target="n:-22:88"/>
+    <edge source="n:-22:51" target="n:-22:88"/>
+    <edge source="n:-22:52" target="n:-22:88"/>
+    <edge source="n:-22:53" target="n:-22:88"/>
+    <edge source="n:-22:54" target="n:-22:88"/>
+    <edge source="n:-22:55" target="n:-22:88"/>
+    <node id="n:-22:89">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC8</data>
+    </node>
+    <edge source="n:-22:56" target="n:-22:89"/>
+    <edge source="n:-22:57" target="n:-22:89"/>
+    <edge source="n:-22:58" target="n:-22:89"/>
+    <edge source="n:-22:59" target="n:-22:89"/>
+    <node id="n:-24:1">
+      <data key="label">entry: *init*</data>
+      <data key="kind">entry</data>
+      <data key="file">cs.wisc.test.Main.java</data>
+      <data key="procedure">cs.wisc.test.Main@ void *init*()</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-24:1" target="n:-24:3"/>
+    <node id="n:-24:2">
+      <data key="label">exit: *init*</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-24:3">
+      <data key="label">this := @this: cs.wisc.test.Main</data>
+      <data key="kind">expression</data>
+      <data key="lines">(0)</data>
+    </node>
+    <edge source="n:-24:3" target="n:-24:4"/>
+    <node id="n:-24:4">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-24:4" target="n:-24:5"/>
+    <node id="n:-24:5">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-24:5" target="n:-24:6"/>
+    <node id="n:-24:6">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-24:6" target="n:-24:7"/>
+    <node id="n:-24:7">
+      <data key="label">globalBooleanCCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBooleanCallCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-24:7" target="n:-24:8"/>
+    <node id="n:-24:8">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-24:8" target="n:-24:9"/>
+    <node id="n:-24:9">
+      <data key="label">shadowStackNode = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-24:9" target="n:-24:10"/>
+    <node id="n:-24:10">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-24:10" target="n:-24:11"/>
+    <node id="n:-24:11">
+      <data key="label">globalBooleanBBCArray = *uwmadison.soot.analysis.Trace: boolean[] globalBBCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-24:11" target="n:-24:12"/>
+    <node id="n:-24:12">
+      <data key="label">globalBooleanFCArray = *uwmadison.soot.analysis.Trace: boolean[] globalFunctionCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-24:12" target="n:-24:13"/>
+    <node id="n:-24:13">
+      <data key="label">globalBooleanFCArray[9] = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-24:13" target="n:-24:14"/>
+    <node id="n:-24:14">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-24:14" target="n:-24:15"/>
+    <node id="n:-24:15">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-24:15" target="n:-24:16"/>
+    <node id="n:-24:16">
+      <data key="label">currBoolean = globalBooleanCCArray[18]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-24:16" target="n:-24:17"/>
+    <node id="n:-24:17">
+      <data key="label">if currBoolean == 1 goto specialinvoke this.*java.lang.Object: void *init*()*()</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-24:17" target="n:-24:18"/>
+    <edge source="n:-24:17" target="n:-24:19"/>
+    <node id="n:-24:18">
+      <data key="label">globalBooleanCCArray[18] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">CC0</data>
+    </node>
+    <edge source="n:-24:18" target="n:-24:19"/>
+    <node id="n:-24:19">
+      <data key="label">specialinvoke this.*java.lang.Object: void *init*()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(1)</data>
+    </node>
+    <edge source="n:-24:19" target="n:-21:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-24:19" target="n:-24:20"/>
+    <node id="n:-24:20">
+      <data key="label">globalBooleanBBCArray[29] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC0</data>
+    </node>
+    <edge source="n:-24:20" target="n:-24:21"/>
+    <node id="n:-24:21">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-24:21" target="n:-24:22"/>
+    <node id="n:-24:22">
+      <data key="label">return</data>
+      <data key="kind">expression</data>
+      <data key="lines">(2)</data>
+    </node>
+    <edge source="n:-24:22" target="n:-24:2"/>
+    <node id="n:-24:37">
+      <data key="label">Ambiguity</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC0</data>
+    </node>
+    <edge source="n:-24:3" target="n:-24:37"/>
+    <edge source="n:-24:4" target="n:-24:37"/>
+    <edge source="n:-24:5" target="n:-24:37"/>
+    <edge source="n:-24:6" target="n:-24:37"/>
+    <edge source="n:-24:7" target="n:-24:37"/>
+    <edge source="n:-24:8" target="n:-24:37"/>
+    <edge source="n:-24:9" target="n:-24:37"/>
+    <edge source="n:-24:10" target="n:-24:37"/>
+    <edge source="n:-24:11" target="n:-24:37"/>
+    <edge source="n:-24:12" target="n:-24:37"/>
+    <edge source="n:-24:13" target="n:-24:37"/>
+    <edge source="n:-24:14" target="n:-24:37"/>
+    <edge source="n:-24:15" target="n:-24:37"/>
+    <edge source="n:-24:16" target="n:-24:37"/>
+    <edge source="n:-24:17" target="n:-24:37"/>
+    <edge source="n:-24:18" target="n:-24:37"/>
+    <edge source="n:-24:19" target="n:-24:37"/>
+    <edge source="n:-24:20" target="n:-24:37"/>
+    <edge source="n:-24:21" target="n:-24:37"/>
+    <edge source="n:-24:22" target="n:-24:37"/>
+  </graph>
+</graphml>

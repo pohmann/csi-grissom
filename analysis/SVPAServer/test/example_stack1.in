@@ -1,0 +1,21 @@
+stack
+n9
+END
+witness
+probe witness
+obsNo,n7
+END
+probe witness
+obsNo,n3
+END
+probe witness
+i,0
+f,1
+t,i,0,0,*
+t,c,0,0,*
+t,r,0,0,*
+t,i,0,1,n3
+t,i,1,1,*
+t,c,1,1,*
+t,r,1,1,*
+END

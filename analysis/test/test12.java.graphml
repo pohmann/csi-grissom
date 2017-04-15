@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="nature"      for="graph" attr.name="nature"     attr.type="string"/>
+  <key id="program-start" for="graph" attr.name="program-start" attr.type="string"/> 
+  <key id="label"       for="node" attr.name="label"       attr.type="string"/>
+  <key id="kind"        for="node" attr.name="kind"        attr.type="string"> <default>declaration</default> </key>
+  <key id="syntax"      for="node" attr.name="syntax"      attr.type="string"/>
+  <key id="basic-block" for="node" attr.name="basic-block" attr.type="string"/>
+  <key id="file"        for="node" attr.name="file"        attr.type="string"/>
+  <key id="procedure"   for="node" attr.name="procedure"   attr.type="string"/>
+  <key id="lines"       for="node" attr.name="lines"       attr.type="string"/>
+  <key id="call-id"     for="node" attr.name="call-id"     attr.type="string"/>
+  <key id="call-name"   for="node" attr.name="call-name"   attr.type="string"/>
+  <key id="alocs-used"  for="node" attr.name="alocs-used"  attr.type="string"/>
+  <key id="alocs-defd"  for="node" attr.name="alocs-defd"  attr.type="string"/>
+  <key id="alocs-mayd"  for="node" attr.name="alocs-mayd"  attr.type="string"/>
+  <key id="csi-label"   for="node" attr.name="csi-label"   attr.type="string"/>
+  <key id="type"        for="edge" attr.name="type"        attr.type="string"> <default>flow</default> </key>
+  <key id="when"        for="edge" attr.name="when"        attr.type="string"> <default>true</default> </key>
+  <key id="scope"       for="edge" attr.name="scope"       attr.type="string"> <default>intraprocedural</default> </key>
+  <graph id="CFG" edgedefault="directed">
+    <data key="program-start">n:-9:1</data>
+    <data key="nature">CFG</data>
+    <node id="n:-1:1">
+      <data key="label">entry: run</data>
+      <data key="kind">entry</data>
+      <data key="file">cs.wisc.test.Buggy.java</data>
+      <data key="procedure">cs.wisc.test.Buggy@ void run()</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-1:1" target="n:-1:3"/>
+    <node id="n:-1:2">
+      <data key="label">exit: run</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-1:3">
+      <data key="label">this := @this: cs.wisc.test.Buggy</data>
+      <data key="kind">expression</data>
+      <data key="lines">(0)</data>
+    </node>
+    <edge source="n:-1:3" target="n:-1:4"/>
+    <node id="n:-1:4">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:4" target="n:-1:5"/>
+    <node id="n:-1:5">
+      <data key="label">cc_bool_1 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:5" target="n:-1:6"/>
+    <node id="n:-1:6">
+      <data key="label">cc_bool_2 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:6" target="n:-1:7"/>
+    <node id="n:-1:7">
+      <data key="label">callTraceObject = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:7" target="n:-1:8"/>
+    <node id="n:-1:8">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:8" target="n:-1:9"/>
+    <node id="n:-1:9">
+      <data key="label">globalBooleanArray = *uwmadison.soot.analysis.CallTrace: boolean[] globalBooleanCallCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:9" target="n:-1:10"/>
+    <node id="n:-1:10">
+      <data key="label">i = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(1)</data>
+    </node>
+    <edge source="n:-1:10" target="n:-1:11"/>
+    <node id="n:-1:11">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(2)</data>
+    </node>
+    <edge source="n:-1:11" target="n:-1:12"/>
+    <node id="n:-1:12">
+      <data key="label">goto [?= nop]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(3)</data>
+    </node>
+    <edge source="n:-1:12" target="n:-1:13"/>
+    <node id="n:-1:13">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(4)</data>
+    </node>
+    <edge source="n:-1:13" target="n:-1:19"/>
+    <edge source="n:-1:13" target="n:-1:14"/>
+    <node id="n:-1:14">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(5)</data>
+    </node>
+    <edge source="n:-1:14" target="n:-1:19"/>
+    <edge source="n:-1:14" target="n:-1:15"/>
+    <node id="n:-1:15">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:15" target="n:-1:19"/>
+    <edge source="n:-1:15" target="n:-1:16"/>
+    <node id="n:-1:16">
+      <data key="label">globalBooleanArray[0] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC0</data>
+    </node>
+    <edge source="n:-1:16" target="n:-1:19"/>
+    <edge source="n:-1:16" target="n:-1:17"/>
+    <node id="n:-1:17">
+      <data key="label">staticinvoke *java.lang.Thread: void sleep(long)*(10L)</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(6)</data>
+    </node>
+    <edge source="n:-1:17" target="n:-2:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-1:17" target="n:-1:19"/>
+    <edge source="n:-1:17" target="n:-1:18"/>
+    <node id="n:-1:18">
+      <data key="label">goto [?= nop]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(7)</data>
+    </node>
+    <edge source="n:-1:18" target="n:-1:19"/>
+    <edge source="n:-1:18" target="n:-1:27"/>
+    <node id="n:-1:19">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(8)</data>
+    </node>
+    <edge source="n:-1:19" target="n:-1:20"/>
+    <node id="n:-1:20">
+      <data key="label">e := @caughtexception</data>
+      <data key="kind">expression</data>
+      <data key="lines">(9)</data>
+    </node>
+    <edge source="n:-1:20" target="n:-1:21"/>
+    <node id="n:-1:21">
+      <data key="label">staticinvoke *uwmadison.soot.analysis.CallTrace: void freeStack()*()</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:21" target="n:-1:22"/>
+    <node id="n:-1:22">
+      <data key="label">cc_bool_1 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:22" target="n:-1:23"/>
+    <node id="n:-1:23">
+      <data key="label">globalBooleanArray[1] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC1</data>
+    </node>
+    <edge source="n:-1:23" target="n:-1:24"/>
+    <node id="n:-1:24">
+      <data key="label">virtualinvoke e.*java.lang.InterruptedException: void printStackTrace()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(10)</data>
+    </node>
+    <edge source="n:-1:24" target="n:-3:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-1:24" target="n:-1:25"/>
+    <node id="n:-1:25">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(11)</data>
+    </node>
+    <edge source="n:-1:25" target="n:-1:26"/>
+    <node id="n:-1:26">
+      <data key="label">goto [?= nop]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(12)</data>
+    </node>
+    <edge source="n:-1:26" target="n:-1:27"/>
+    <node id="n:-1:27">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(13)</data>
+    </node>
+    <edge source="n:-1:27" target="n:-1:28"/>
+    <node id="n:-1:28">
+      <data key="label">cc_bool_2 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-1:28" target="n:-1:29"/>
+    <node id="n:-1:29">
+      <data key="label">globalBooleanArray[2] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC2</data>
+    </node>
+    <edge source="n:-1:29" target="n:-1:30"/>
+    <node id="n:-1:30">
+      <data key="label">temp$0 = staticinvoke *cs.wisc.test.Buggy: int randInt(int,int)*(0, 500)</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(14)</data>
+    </node>
+    <edge source="n:-1:30" target="n:-4:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-1:30" target="n:-1:31"/>
+    <node id="n:-1:31">
+      <data key="label">ran = temp$0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(15)</data>
+    </node>
+    <edge source="n:-1:31" target="n:-1:32"/>
+    <node id="n:-1:32">
+      <data key="label">if ran == 2 goto nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(16)</data>
+    </node>
+    <edge source="n:-1:32" target="n:-1:33"/>
+    <edge source="n:-1:32" target="n:-1:34"/>
+    <node id="n:-1:33">
+      <data key="label">goto [?= nop]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(17)</data>
+    </node>
+    <edge source="n:-1:33" target="n:-1:37"/>
+    <node id="n:-1:34">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(18)</data>
+    </node>
+    <edge source="n:-1:34" target="n:-1:35"/>
+    <node id="n:-1:35">
+      <data key="label">temp$1 = 1 / 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(19)</data>
+    </node>
+    <edge source="n:-1:35" target="n:-1:36"/>
+    <node id="n:-1:36">
+      <data key="label">j = temp$1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(20)</data>
+    </node>
+    <edge source="n:-1:36" target="n:-1:37"/>
+    <node id="n:-1:37">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(21)</data>
+    </node>
+    <edge source="n:-1:37" target="n:-1:38"/>
+    <node id="n:-1:38">
+      <data key="label">if i == 2147483647 goto nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(22)</data>
+    </node>
+    <edge source="n:-1:38" target="n:-1:39"/>
+    <edge source="n:-1:38" target="n:-1:40"/>
+    <node id="n:-1:39">
+      <data key="label">goto [?= nop]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(23)</data>
+    </node>
+    <edge source="n:-1:39" target="n:-1:42"/>
+    <node id="n:-1:40">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(24)</data>
+    </node>
+    <edge source="n:-1:40" target="n:-1:41"/>
+    <node id="n:-1:41">
+      <data key="label">goto [?= nop]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(25)</data>
+    </node>
+    <edge source="n:-1:41" target="n:-1:47"/>
+    <node id="n:-1:42">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(26)</data>
+    </node>
+    <edge source="n:-1:42" target="n:-1:43"/>
+    <node id="n:-1:43">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(27)</data>
+    </node>
+    <edge source="n:-1:43" target="n:-1:44"/>
+    <node id="n:-1:44">
+      <data key="label">temp$2 = i + 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(28)</data>
+    </node>
+    <edge source="n:-1:44" target="n:-1:45"/>
+    <node id="n:-1:45">
+      <data key="label">i = temp$2</data>
+      <data key="kind">expression</data>
+      <data key="lines">(29)</data>
+    </node>
+    <edge source="n:-1:45" target="n:-1:46"/>
+    <node id="n:-1:46">
+      <data key="label">goto [?= nop]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(30)</data>
+    </node>
+    <edge source="n:-1:46" target="n:-1:11"/>
+    <node id="n:-1:47">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(31)</data>
+    </node>
+    <edge source="n:-1:47" target="n:-1:48"/>
+    <node id="n:-1:48">
+      <data key="label">return</data>
+      <data key="kind">expression</data>
+      <data key="lines">(32)</data>
+    </node>
+    <edge source="n:-1:48" target="n:-1:2"/>
+    <node id="n:-1:56">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC0</data>
+    </node>
+    <edge source="n:-1:3" target="n:-1:56"/>
+    <edge source="n:-1:4" target="n:-1:56"/>
+    <edge source="n:-1:5" target="n:-1:56"/>
+    <edge source="n:-1:6" target="n:-1:56"/>
+    <edge source="n:-1:7" target="n:-1:56"/>
+    <edge source="n:-1:8" target="n:-1:56"/>
+    <edge source="n:-1:9" target="n:-1:56"/>
+    <edge source="n:-1:10" target="n:-1:56"/>
+    <node id="n:-1:57">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC1</data>
+    </node>
+    <edge source="n:-1:11" target="n:-1:57"/>
+    <edge source="n:-1:12" target="n:-1:57"/>
+    <node id="n:-1:58">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC2</data>
+    </node>
+    <edge source="n:-1:13" target="n:-1:58"/>
+    <node id="n:-1:59">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC3</data>
+    </node>
+    <edge source="n:-1:14" target="n:-1:59"/>
+    <node id="n:-1:60">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC4</data>
+    </node>
+    <edge source="n:-1:17" target="n:-1:60"/>
+    <node id="n:-1:61">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC5</data>
+    </node>
+    <edge source="n:-1:18" target="n:-1:61"/>
+    <node id="n:-1:62">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC6</data>
+    </node>
+    <edge source="n:-1:19" target="n:-1:62"/>
+    <edge source="n:-1:20" target="n:-1:62"/>
+    <edge source="n:-1:21" target="n:-1:62"/>
+    <edge source="n:-1:22" target="n:-1:62"/>
+    <edge source="n:-1:23" target="n:-1:62"/>
+    <edge source="n:-1:24" target="n:-1:62"/>
+    <edge source="n:-1:25" target="n:-1:62"/>
+    <edge source="n:-1:26" target="n:-1:62"/>
+    <node id="n:-1:63">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC7</data>
+    </node>
+    <edge source="n:-1:27" target="n:-1:63"/>
+    <edge source="n:-1:28" target="n:-1:63"/>
+    <edge source="n:-1:29" target="n:-1:63"/>
+    <edge source="n:-1:30" target="n:-1:63"/>
+    <edge source="n:-1:31" target="n:-1:63"/>
+    <edge source="n:-1:32" target="n:-1:63"/>
+    <node id="n:-1:64">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC8</data>
+    </node>
+    <edge source="n:-1:33" target="n:-1:64"/>
+    <node id="n:-1:65">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC9</data>
+    </node>
+    <edge source="n:-1:34" target="n:-1:65"/>
+    <edge source="n:-1:35" target="n:-1:65"/>
+    <edge source="n:-1:36" target="n:-1:65"/>
+    <node id="n:-1:66">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC10</data>
+    </node>
+    <edge source="n:-1:37" target="n:-1:66"/>
+    <edge source="n:-1:38" target="n:-1:66"/>
+    <node id="n:-1:67">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC11</data>
+    </node>
+    <edge source="n:-1:39" target="n:-1:67"/>
+    <node id="n:-1:68">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC12</data>
+    </node>
+    <edge source="n:-1:40" target="n:-1:68"/>
+    <edge source="n:-1:41" target="n:-1:68"/>
+    <node id="n:-1:69">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC13</data>
+    </node>
+    <edge source="n:-1:42" target="n:-1:69"/>
+    <edge source="n:-1:43" target="n:-1:69"/>
+    <edge source="n:-1:44" target="n:-1:69"/>
+    <edge source="n:-1:45" target="n:-1:69"/>
+    <edge source="n:-1:46" target="n:-1:69"/>
+    <node id="n:-1:70">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC14</data>
+    </node>
+    <edge source="n:-1:47" target="n:-1:70"/>
+    <edge source="n:-1:48" target="n:-1:70"/>
+    <node id="n:-4:1">
+      <data key="label">entry: randInt</data>
+      <data key="kind">entry</data>
+      <data key="file">cs.wisc.test.Buggy.java</data>
+      <data key="procedure">cs.wisc.test.Buggy@ int randInt(int,int)</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-4:1" target="n:-4:3"/>
+    <node id="n:-4:2">
+      <data key="label">exit: randInt</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-4:3">
+      <data key="label">min := @parameter0: int</data>
+      <data key="kind">expression</data>
+      <data key="lines">(0)</data>
+    </node>
+    <edge source="n:-4:3" target="n:-4:4"/>
+    <node id="n:-4:4">
+      <data key="label">max := @parameter1: int</data>
+      <data key="kind">expression</data>
+      <data key="lines">(1)</data>
+    </node>
+    <edge source="n:-4:4" target="n:-4:5"/>
+    <node id="n:-4:5">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:5" target="n:-4:6"/>
+    <node id="n:-4:6">
+      <data key="label">cc_bool_1 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:6" target="n:-4:7"/>
+    <node id="n:-4:7">
+      <data key="label">callTraceObject = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:7" target="n:-4:8"/>
+    <node id="n:-4:8">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:8" target="n:-4:9"/>
+    <node id="n:-4:9">
+      <data key="label">globalBooleanArray = *uwmadison.soot.analysis.CallTrace: boolean[] globalBooleanCallCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:9" target="n:-4:10"/>
+    <node id="n:-4:10">
+      <data key="label">temp$0 = *cs.wisc.test.Buggy: java.util.Random rand*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(2)</data>
+    </node>
+    <edge source="n:-4:10" target="n:-4:11"/>
+    <node id="n:-4:11">
+      <data key="label">temp$1 = max - min</data>
+      <data key="kind">expression</data>
+      <data key="lines">(3)</data>
+    </node>
+    <edge source="n:-4:11" target="n:-4:12"/>
+    <node id="n:-4:12">
+      <data key="label">temp$2 = temp$1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(4)</data>
+    </node>
+    <edge source="n:-4:12" target="n:-4:13"/>
+    <node id="n:-4:13">
+      <data key="label">temp$3 = temp$2 + 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(5)</data>
+    </node>
+    <edge source="n:-4:13" target="n:-4:14"/>
+    <node id="n:-4:14">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:14" target="n:-4:15"/>
+    <node id="n:-4:15">
+      <data key="label">globalBooleanArray[3] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC0</data>
+    </node>
+    <edge source="n:-4:15" target="n:-4:16"/>
+    <node id="n:-4:16">
+      <data key="label">temp$4 = virtualinvoke temp$0.*java.util.Random: int nextInt(int)*(temp$3)</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(6)</data>
+    </node>
+    <edge source="n:-4:16" target="n:-5:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-4:16" target="n:-4:17"/>
+    <node id="n:-4:17">
+      <data key="label">temp$5 = temp$4</data>
+      <data key="kind">expression</data>
+      <data key="lines">(7)</data>
+    </node>
+    <edge source="n:-4:17" target="n:-4:18"/>
+    <node id="n:-4:18">
+      <data key="label">randomNum = temp$5 + min</data>
+      <data key="kind">expression</data>
+      <data key="lines">(8)</data>
+    </node>
+    <edge source="n:-4:18" target="n:-4:19"/>
+    <node id="n:-4:19">
+      <data key="label">temp$6 = *cs.wisc.test.Buggy: boolean doDebug*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(9)</data>
+    </node>
+    <edge source="n:-4:19" target="n:-4:20"/>
+    <node id="n:-4:20">
+      <data key="label">if temp$6 == 0 goto nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(10)</data>
+    </node>
+    <edge source="n:-4:20" target="n:-4:21"/>
+    <edge source="n:-4:20" target="n:-4:27"/>
+    <node id="n:-4:21">
+      <data key="label">goto [?= nop]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(11)</data>
+    </node>
+    <edge source="n:-4:21" target="n:-4:22"/>
+    <node id="n:-4:22">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(12)</data>
+    </node>
+    <edge source="n:-4:22" target="n:-4:23"/>
+    <node id="n:-4:23">
+      <data key="label">temp$7 = *java.lang.System: java.io.PrintStream out*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(13)</data>
+    </node>
+    <edge source="n:-4:23" target="n:-4:24"/>
+    <node id="n:-4:24">
+      <data key="label">cc_bool_1 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-4:24" target="n:-4:25"/>
+    <node id="n:-4:25">
+      <data key="label">globalBooleanArray[4] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC1</data>
+    </node>
+    <edge source="n:-4:25" target="n:-4:26"/>
+    <node id="n:-4:26">
+      <data key="label">virtualinvoke temp$7.*java.io.PrintStream: void println(int)*(randomNum)</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(14)</data>
+    </node>
+    <edge source="n:-4:26" target="n:-6:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-4:26" target="n:-4:27"/>
+    <node id="n:-4:27">
+      <data key="label">nop</data>
+      <data key="kind">expression</data>
+      <data key="lines">(15)</data>
+    </node>
+    <edge source="n:-4:27" target="n:-4:28"/>
+    <node id="n:-4:28">
+      <data key="label">return randomNum</data>
+      <data key="kind">expression</data>
+      <data key="lines">(16)</data>
+    </node>
+    <edge source="n:-4:28" target="n:-4:2"/>
+    <node id="n:-4:35">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC0</data>
+    </node>
+    <edge source="n:-4:3" target="n:-4:35"/>
+    <edge source="n:-4:4" target="n:-4:35"/>
+    <edge source="n:-4:5" target="n:-4:35"/>
+    <edge source="n:-4:6" target="n:-4:35"/>
+    <edge source="n:-4:7" target="n:-4:35"/>
+    <edge source="n:-4:8" target="n:-4:35"/>
+    <edge source="n:-4:9" target="n:-4:35"/>
+    <edge source="n:-4:10" target="n:-4:35"/>
+    <edge source="n:-4:11" target="n:-4:35"/>
+    <edge source="n:-4:12" target="n:-4:35"/>
+    <edge source="n:-4:13" target="n:-4:35"/>
+    <edge source="n:-4:14" target="n:-4:35"/>
+    <edge source="n:-4:15" target="n:-4:35"/>
+    <edge source="n:-4:16" target="n:-4:35"/>
+    <edge source="n:-4:17" target="n:-4:35"/>
+    <edge source="n:-4:18" target="n:-4:35"/>
+    <edge source="n:-4:19" target="n:-4:35"/>
+    <edge source="n:-4:20" target="n:-4:35"/>
+    <node id="n:-4:36">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC1</data>
+    </node>
+    <edge source="n:-4:21" target="n:-4:36"/>
+    <node id="n:-4:37">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC2</data>
+    </node>
+    <edge source="n:-4:22" target="n:-4:37"/>
+    <edge source="n:-4:23" target="n:-4:37"/>
+    <edge source="n:-4:24" target="n:-4:37"/>
+    <edge source="n:-4:25" target="n:-4:37"/>
+    <edge source="n:-4:26" target="n:-4:37"/>
+    <node id="n:-4:38">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC3</data>
+    </node>
+    <edge source="n:-4:27" target="n:-4:38"/>
+    <edge source="n:-4:28" target="n:-4:38"/>
+    <node id="n:-7:1">
+      <data key="label">entry: *init*</data>
+      <data key="kind">entry</data>
+      <data key="file">cs.wisc.test.Buggy.java</data>
+      <data key="procedure">cs.wisc.test.Buggy@ void *init*()</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-7:1" target="n:-7:3"/>
+    <node id="n:-7:2">
+      <data key="label">exit: *init*</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-7:3">
+      <data key="label">this := @this: cs.wisc.test.Buggy</data>
+      <data key="kind">expression</data>
+      <data key="lines">(0)</data>
+    </node>
+    <edge source="n:-7:3" target="n:-7:4"/>
+    <node id="n:-7:4">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-7:4" target="n:-7:5"/>
+    <node id="n:-7:5">
+      <data key="label">callTraceObject = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-7:5" target="n:-7:6"/>
+    <node id="n:-7:6">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-7:6" target="n:-7:7"/>
+    <node id="n:-7:7">
+      <data key="label">globalBooleanArray = *uwmadison.soot.analysis.CallTrace: boolean[] globalBooleanCallCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-7:7" target="n:-7:8"/>
+    <node id="n:-7:8">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-7:8" target="n:-7:9"/>
+    <node id="n:-7:9">
+      <data key="label">globalBooleanArray[5] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC0</data>
+    </node>
+    <edge source="n:-7:9" target="n:-7:10"/>
+    <node id="n:-7:10">
+      <data key="label">specialinvoke this.*java.lang.Object: void *init*()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(1)</data>
+    </node>
+    <edge source="n:-7:10" target="n:-8:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-7:10" target="n:-7:11"/>
+    <node id="n:-7:11">
+      <data key="label">return</data>
+      <data key="kind">expression</data>
+      <data key="lines">(2)</data>
+    </node>
+    <edge source="n:-7:11" target="n:-7:2"/>
+    <node id="n:-7:17">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC0</data>
+    </node>
+    <edge source="n:-7:3" target="n:-7:17"/>
+    <edge source="n:-7:4" target="n:-7:17"/>
+    <edge source="n:-7:5" target="n:-7:17"/>
+    <edge source="n:-7:6" target="n:-7:17"/>
+    <edge source="n:-7:7" target="n:-7:17"/>
+    <edge source="n:-7:8" target="n:-7:17"/>
+    <edge source="n:-7:9" target="n:-7:17"/>
+    <edge source="n:-7:10" target="n:-7:17"/>
+    <edge source="n:-7:11" target="n:-7:17"/>
+    <node id="n:-9:1">
+      <data key="label">entry: main</data>
+      <data key="kind">entry</data>
+      <data key="file">cs.wisc.test.Main.java</data>
+      <data key="procedure">cs.wisc.test.Main@ void main()</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-9:1" target="n:-9:3"/>
+    <node id="n:-9:2">
+      <data key="label">exit: main</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-9:3">
+      <data key="label">args := @parameter0: java.lang.String[]</data>
+      <data key="kind">expression</data>
+      <data key="lines">(0)</data>
+    </node>
+    <edge source="n:-9:3" target="n:-9:4"/>
+    <node id="n:-9:4">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-9:4" target="n:-9:5"/>
+    <node id="n:-9:5">
+      <data key="label">cc_bool_1 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-9:5" target="n:-9:6"/>
+    <node id="n:-9:6">
+      <data key="label">callTraceObject = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-9:6" target="n:-9:7"/>
+    <node id="n:-9:7">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-9:7" target="n:-9:8"/>
+    <node id="n:-9:8">
+      <data key="label">globalBooleanArray = *uwmadison.soot.analysis.CallTrace: boolean[] globalBooleanCallCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-9:8" target="n:-9:9"/>
+    <node id="n:-9:9">
+      <data key="label">temp$0 = new cs.wisc.test.Buggy</data>
+      <data key="kind">expression</data>
+      <data key="lines">(1)</data>
+    </node>
+    <edge source="n:-9:9" target="n:-9:10"/>
+    <node id="n:-9:10">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-9:10" target="n:-9:11"/>
+    <node id="n:-9:11">
+      <data key="label">globalBooleanArray[6] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC0</data>
+    </node>
+    <edge source="n:-9:11" target="n:-9:12"/>
+    <node id="n:-9:12">
+      <data key="label">specialinvoke temp$0.*cs.wisc.test.Buggy: void *init*()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(2)</data>
+    </node>
+    <edge source="n:-9:12" target="n:-7:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-9:12" target="n:-9:13"/>
+    <node id="n:-9:13">
+      <data key="label">bug = temp$0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(3)</data>
+    </node>
+    <edge source="n:-9:13" target="n:-9:14"/>
+    <node id="n:-9:14">
+      <data key="label">cc_bool_1 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-9:14" target="n:-9:15"/>
+    <node id="n:-9:15">
+      <data key="label">globalBooleanArray[7] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC1</data>
+    </node>
+    <edge source="n:-9:15" target="n:-9:16"/>
+    <node id="n:-9:16">
+      <data key="label">virtualinvoke bug.*cs.wisc.test.Buggy: void run()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(4)</data>
+    </node>
+    <edge source="n:-9:16" target="n:-1:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-9:16" target="n:-9:17"/>
+    <node id="n:-9:17">
+      <data key="label">return</data>
+      <data key="kind">expression</data>
+      <data key="lines">(5)</data>
+    </node>
+    <edge source="n:-9:17" target="n:-9:2"/>
+    <node id="n:-9:25">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC0</data>
+    </node>
+    <edge source="n:-9:3" target="n:-9:25"/>
+    <edge source="n:-9:4" target="n:-9:25"/>
+    <edge source="n:-9:5" target="n:-9:25"/>
+    <edge source="n:-9:6" target="n:-9:25"/>
+    <edge source="n:-9:7" target="n:-9:25"/>
+    <edge source="n:-9:8" target="n:-9:25"/>
+    <edge source="n:-9:9" target="n:-9:25"/>
+    <edge source="n:-9:10" target="n:-9:25"/>
+    <edge source="n:-9:11" target="n:-9:25"/>
+    <edge source="n:-9:12" target="n:-9:25"/>
+    <edge source="n:-9:13" target="n:-9:25"/>
+    <edge source="n:-9:14" target="n:-9:25"/>
+    <edge source="n:-9:15" target="n:-9:25"/>
+    <edge source="n:-9:16" target="n:-9:25"/>
+    <edge source="n:-9:17" target="n:-9:25"/>
+    <node id="n:-10:1">
+      <data key="label">entry: *init*</data>
+      <data key="kind">entry</data>
+      <data key="file">cs.wisc.test.Main.java</data>
+      <data key="procedure">cs.wisc.test.Main@ void *init*()</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-10:1" target="n:-10:3"/>
+    <node id="n:-10:2">
+      <data key="label">exit: *init*</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-10:3">
+      <data key="label">this := @this: cs.wisc.test.Main</data>
+      <data key="kind">expression</data>
+      <data key="lines">(0)</data>
+    </node>
+    <edge source="n:-10:3" target="n:-10:4"/>
+    <node id="n:-10:4">
+      <data key="label">cc_bool_0 = 0</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-10:4" target="n:-10:5"/>
+    <node id="n:-10:5">
+      <data key="label">callTraceObject = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-10:5" target="n:-10:6"/>
+    <node id="n:-10:6">
+      <data key="label">__cc_arr = null</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-10:6" target="n:-10:7"/>
+    <node id="n:-10:7">
+      <data key="label">globalBooleanArray = *uwmadison.soot.analysis.CallTrace: boolean[] globalBooleanCallCoverage*</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-10:7" target="n:-10:8"/>
+    <node id="n:-10:8">
+      <data key="label">cc_bool_0 = 1</data>
+      <data key="kind">expression</data>
+      <data key="lines">(-1)</data>
+    </node>
+    <edge source="n:-10:8" target="n:-10:9"/>
+    <node id="n:-10:9">
+      <data key="label">globalBooleanArray[8] = 1</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">BBC0</data>
+    </node>
+    <edge source="n:-10:9" target="n:-10:10"/>
+    <node id="n:-10:10">
+      <data key="label">specialinvoke this.*java.lang.Object: void *init*()*()</data>
+      <data key="kind">call-site</data>
+      <data key="lines">(1)</data>
+    </node>
+    <edge source="n:-10:10" target="n:-8:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-10:10" target="n:-10:11"/>
+    <node id="n:-10:11">
+      <data key="label">return</data>
+      <data key="kind">expression</data>
+      <data key="lines">(2)</data>
+    </node>
+    <edge source="n:-10:11" target="n:-10:2"/>
+    <node id="n:-10:17">
+      <data key="label">Dummy</data>
+      <data key="kind">expression</data>
+      <data key="csi-label">ABBC0</data>
+    </node>
+    <edge source="n:-10:3" target="n:-10:17"/>
+    <edge source="n:-10:4" target="n:-10:17"/>
+    <edge source="n:-10:5" target="n:-10:17"/>
+    <edge source="n:-10:6" target="n:-10:17"/>
+    <edge source="n:-10:7" target="n:-10:17"/>
+    <edge source="n:-10:8" target="n:-10:17"/>
+    <edge source="n:-10:9" target="n:-10:17"/>
+    <edge source="n:-10:10" target="n:-10:17"/>
+    <edge source="n:-10:11" target="n:-10:17"/>
+<!--Exceptional Edges-->
+<!--Native Edges-->
+    <node id="n:-6:1">
+      <data key="label">entry: println</data>
+      <data key="kind">entry</data>
+      <data key="file">java.io.PrintStream.java</data>
+      <data key="procedure">java.io.PrintStream@ void println(int)</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-6:2">
+      <data key="label">exit: println</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-6:1" target="n:-6:2"/>
+    <node id="n:-2:1">
+      <data key="label">entry: sleep</data>
+      <data key="kind">entry</data>
+      <data key="file">java.lang.Thread.java</data>
+      <data key="procedure">java.lang.Thread@ void sleep(long)</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-2:2">
+      <data key="label">exit: sleep</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-2:1" target="n:-2:2"/>
+    <node id="n:-5:1">
+      <data key="label">entry: nextInt</data>
+      <data key="kind">entry</data>
+      <data key="file">java.util.Random.java</data>
+      <data key="procedure">java.util.Random@ int nextInt(int)</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-5:2">
+      <data key="label">exit: nextInt</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-5:1" target="n:-5:2"/>
+    <node id="n:-3:1">
+      <data key="label">entry: printStackTrace</data>
+      <data key="kind">entry</data>
+      <data key="file">java.lang.Throwable.java</data>
+      <data key="procedure">java.lang.Throwable@ void printStackTrace()</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-3:2">
+      <data key="label">exit: printStackTrace</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-3:1" target="n:-3:2"/>
+    <node id="n:-8:1">
+      <data key="label">entry: *init*</data>
+      <data key="kind">entry</data>
+      <data key="file">java.lang.Object.java</data>
+      <data key="procedure">java.lang.Object@ void *init*()</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <node id="n:-8:2">
+      <data key="label">exit: *init*</data>
+      <data key="kind">exit</data>
+      <data key="lines">( 0 )</data>
+    </node>
+    <edge source="n:-8:1" target="n:-8:2"/>
+  </graph>
+</graphml>

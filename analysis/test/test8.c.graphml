@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+     http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="label"      for="node" attr.name="label"      attr.type="string"/>
+  <key id="kind"       for="node" attr.name="kind"       attr.type="string"> <default>declaration</default> </key>
+  <key id="syntax"     for="node" attr.name="syntax"     attr.type="string"/>
+  <key id="basic-block"     for="node" attr.name="basic-block"     attr.type="string"/>
+  <key id="file"       for="node" attr.name="file"       attr.type="string"/>
+  <key id="procedure"  for="node" attr.name="procedure"  attr.type="string"/>
+  <key id="lines"      for="node" attr.name="lines"      attr.type="string"/>
+  <key id="call-id"    for="node" attr.name="call-id"    attr.type="string"/>
+  <key id="call-name"  for="node" attr.name="call-name"  attr.type="string"/>
+  <key id="alocs-used" for="node" attr.name="alocs-used" attr.type="string"/>
+  <key id="alocs-defd" for="node" attr.name="alocs-defd" attr.type="string"/>
+  <key id="alocs-mayd" for="node" attr.name="alocs-mayd" attr.type="string"/>
+  <key id="type"  for="edge" attr.name="type"  attr.type="string"> <default>flow</default> </key>
+  <key id="when"  for="edge" attr.name="when"  attr.type="string"> <default>true</default> </key>
+  <key id="scope" for="edge" attr.name="scope" attr.type="string"> <default>intraprocedural</default> </key>
+  <graph id="PDG" edgedefault="directed">
+    <!-- pdg -3 main user-defined -->
+    <node id="n:-3:16">
+      <data key="label">exit: main</data>
+      <data key="basic-block">n:-3:16 n:-3:16</data>
+      <data key="kind">exit</data>
+      <data key="lines">(16)</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <node id="n:-3:1">
+      <data key="label">entry: main()</data>
+      <data key="basic-block">n:-3:1 n:-3:1</data>
+      <data key="kind">entry</data>
+      <data key="file">/afs/cs.wisc.edu/u/o/h/ohmann/private/research/coredump/sat-graphml/test/test8.c</data>
+      <data key="procedure">main</data>
+      <data key="lines">(1 1)</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:1" target="n:-3:3">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:1" target="n:-3:16">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:1" target="n:-3:5">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:1" target="n:-3:7">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:1" target="n:-3:17">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:1" target="n:-3:-10">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:1" target="n:-3:8">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:1" target="n:-3:4">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:1" target="n:-3:9">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:1" target="n:-3:6">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:1" target="n:-3:10"/>
+    <node id="n:-3:17">
+      <data key="label">f-out: main()</data>
+      <data key="kind">formal-out</data>
+      <data key="lines">(1 1)</data>
+      <data key="alocs-used">main$return-9 </data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <node id="n:-3:18">
+      <data key="label">x % 2 == 0</data>
+      <data key="basic-block">n:-3:18 n:-3:18</data>
+      <data key="kind">control-point</data>
+      <data key="syntax">if</data>
+      <data key="lines">(5)</data>
+      <data key="alocs-used">x-10 </data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:18" target="n:-3:20">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:18" target="n:-3:23">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:18" target="n:-3:20"/>
+    <edge source="n:-3:18" target="n:-3:19">
+      <data key="when">false</data>
+    </edge>
+    <node id="n:-3:3">
+      <data key="label">f-in: int argc</data>
+      <data key="kind">formal-in</data>
+      <data key="lines">(1)</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd">argc-5 </data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <node id="n:-3:19">
+      <data key="label">x+=y</data>
+      <data key="basic-block">n:-3:19 n:-3:19</data>
+      <data key="kind">expression</data>
+      <data key="lines">(12)</data>
+      <data key="alocs-used">y-11 x-10 </data>
+      <data key="alocs-defd">x-10 </data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:19" target="n:-3:18">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:19" target="n:-3:19">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:19" target="n:-3:20">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:19" target="n:-3:22">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:19" target="n:-3:24">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:19" target="n:-3:25">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:19" target="n:-3:12">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:19" target="n:-3:13">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:19" target="n:-3:12"/>
+    <node id="n:-3:20">
+      <data key="label">x % 3 == 0</data>
+      <data key="basic-block">n:-3:20 n:-3:20</data>
+      <data key="kind">control-point</data>
+      <data key="syntax">if</data>
+      <data key="lines">(6)</data>
+      <data key="alocs-used">x-10 </data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:20" target="n:-3:25">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:20" target="n:-3:21">
+      <data key="type">control</data>
+      <data key="when">false</data>
+    </edge>
+    <edge source="n:-3:20" target="n:-3:22">
+      <data key="type">control</data>
+      <data key="when">false</data>
+    </edge>
+    <edge source="n:-3:20" target="n:-3:25"/>
+    <edge source="n:-3:20" target="n:-3:21">
+      <data key="when">false</data>
+    </edge>
+    <node id="n:-3:5">
+      <data key="label">f-in: char** argv</data>
+      <data key="kind">formal-in</data>
+      <data key="lines">(1)</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd">argv-7 </data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <node id="n:-3:21">
+      <data key="label">else</data>
+      <data key="basic-block">n:-3:21 n:-3:22</data>
+      <data key="kind">label</data>
+      <data key="syntax">else</data>
+      <data key="lines">(8)</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:21" target="n:-3:22"/>
+    <node id="n:-3:22">
+      <data key="label">x % 4 == 0</data>
+      <data key="basic-block">n:-3:21 n:-3:22</data>
+      <data key="kind">control-point</data>
+      <data key="syntax">if</data>
+      <data key="lines">(8)</data>
+      <data key="alocs-used">x-10 </data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:22" target="n:-3:24">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:22" target="n:-3:24"/>
+    <edge source="n:-3:22" target="n:-3:23">
+      <data key="when">false</data>
+    </edge>
+    <node id="n:-3:7">
+      <data key="label">body: main()</data>
+      <data key="kind">body</data>
+      <data key="lines">(1 1)</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:7" target="n:-3:12">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:7" target="n:-3:10">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:7" target="n:-3:13">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:7" target="n:-3:14">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:7" target="n:-3:15">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:7" target="n:-3:11">
+      <data key="type">control</data>
+    </edge>
+    <node id="n:-3:23">
+      <data key="label">y++</data>
+      <data key="basic-block">n:-3:23 n:-3:23</data>
+      <data key="kind">expression</data>
+      <data key="lines">(10)</data>
+      <data key="alocs-used">y-11 </data>
+      <data key="alocs-defd">y-11 </data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:23" target="n:-3:19">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:23" target="n:-3:23">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:23" target="n:-3:25">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:23" target="n:-3:12">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:23" target="n:-3:14">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:23" target="n:-3:19"/>
+    <node id="n:-3:24">
+      <data key="label">x++</data>
+      <data key="basic-block">n:-3:24 n:-3:24</data>
+      <data key="kind">expression</data>
+      <data key="lines">(9)</data>
+      <data key="alocs-used">x-10 </data>
+      <data key="alocs-defd">x-10 </data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:24" target="n:-3:19">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:24" target="n:-3:23"/>
+    <node id="n:-3:25">
+      <data key="label">x += (y%3+1)</data>
+      <data key="basic-block">n:-3:25 n:-3:25</data>
+      <data key="kind">expression</data>
+      <data key="lines">(7)</data>
+      <data key="alocs-used">y-11 x-10 </data>
+      <data key="alocs-defd">x-10 </data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:25" target="n:-3:19">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:25" target="n:-3:23"/>
+    <node id="n:-3:10">
+      <data key="label">x = 2</data>
+      <data key="basic-block">n:-3:10 n:-3:11</data>
+      <data key="kind">expression</data>
+      <data key="lines">(2)</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd">x-10 </data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:10" target="n:-3:18">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:10" target="n:-3:19">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:10" target="n:-3:20">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:10" target="n:-3:22">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:10" target="n:-3:24">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:10" target="n:-3:25">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:10" target="n:-3:12">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:10" target="n:-3:13">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:10" target="n:-3:11"/>
+    <node id="n:-3:11">
+      <data key="label">y = 25</data>
+      <data key="basic-block">n:-3:10 n:-3:11</data>
+      <data key="kind">expression</data>
+      <data key="lines">(3)</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd">y-11 </data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:11" target="n:-3:19">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:11" target="n:-3:23">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:11" target="n:-3:25">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:11" target="n:-3:12">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:11" target="n:-3:14">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:11" target="n:-3:12"/>
+    <node id="n:-3:12">
+      <data key="label">x &lt; y</data>
+      <data key="basic-block">n:-3:12 n:-3:12</data>
+      <data key="kind">control-point</data>
+      <data key="syntax">while</data>
+      <data key="lines">(4)</data>
+      <data key="alocs-used">y-11 x-10 </data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:12" target="n:-3:12">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:12" target="n:-3:18">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:12" target="n:-3:19">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-3:12" target="n:-3:18"/>
+    <edge source="n:-3:12" target="n:-3:13">
+      <data key="when">false</data>
+    </edge>
+    <node id="n:-3:13">
+      <data key="label">x--</data>
+      <data key="basic-block">n:-3:13 n:-3:15</data>
+      <data key="kind">expression</data>
+      <data key="lines">(14)</data>
+      <data key="alocs-used">x-10 </data>
+      <data key="alocs-defd">x-10 </data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:13" target="n:-3:14">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:13" target="n:-3:14"/>
+    <node id="n:-3:14">
+      <data key="label">(x+y)</data>
+      <data key="basic-block">n:-3:13 n:-3:15</data>
+      <data key="kind">expression</data>
+      <data key="syntax">return</data>
+      <data key="lines">(15)</data>
+      <data key="alocs-used">y-11 x-10 </data>
+      <data key="alocs-defd">main$return-9 </data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:14" target="n:-3:17">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:14" target="n:-3:15"/>
+    <node id="n:-3:15">
+      <data key="label">return: main</data>
+      <data key="basic-block">n:-3:13 n:-3:15</data>
+      <data key="kind">return</data>
+      <data key="syntax">return</data>
+      <data key="lines">(15)</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:15" target="n:-3:16"/>
+    <node id="n:-3:-10">
+      <data key="label">decl: main$return</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:-10" target="n:-3:17">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:-10" target="n:-3:14">
+      <data key="type">data</data>
+    </edge>
+    <node id="n:-3:8">
+      <data key="label">decl: x</data>
+      <data key="lines">(2)</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:8" target="n:-3:18">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:8" target="n:-3:19">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:8" target="n:-3:20">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:8" target="n:-3:22">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:8" target="n:-3:24">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:8" target="n:-3:25">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:8" target="n:-3:10">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:8" target="n:-3:12">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:8" target="n:-3:13">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:8" target="n:-3:14">
+      <data key="type">data</data>
+    </edge>
+    <node id="n:-3:4">
+      <data key="label">decl: argc</data>
+      <data key="lines">(1)</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:4" target="n:-3:3">
+      <data key="type">data</data>
+    </edge>
+    <node id="n:-3:9">
+      <data key="label">decl: y</data>
+      <data key="lines">(3)</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:9" target="n:-3:19">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:9" target="n:-3:23">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:9" target="n:-3:25">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:9" target="n:-3:11">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:9" target="n:-3:12">
+      <data key="type">data</data>
+    </edge>
+    <edge source="n:-3:9" target="n:-3:14">
+      <data key="type">data</data>
+    </edge>
+    <node id="n:-3:6">
+      <data key="label">decl: argv</data>
+      <data key="lines">(1)</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-3:6" target="n:-3:5">
+      <data key="type">data</data>
+    </edge>
+    <!-- pdg -2 #System_Initialization system-initialization -->
+    <node id="n:-2:-6">
+      <data key="label">exit: #System_Initialization</data>
+      <data key="basic-block">n:-2:-6 n:-2:-6</data>
+      <data key="kind">exit</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <node id="n:-2:-5">
+      <data key="label">body: #System_Initialization</data>
+      <data key="kind">body</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-2:-5" target="n:-2:-3">
+      <data key="type">control</data>
+      <data key="when">l0</data>
+    </edge>
+    <edge source="n:-2:-5" target="n:-2:-2">
+      <data key="type">control</data>
+      <data key="when">l0</data>
+    </edge>
+    <node id="n:-2:-4">
+      <data key="label">entry: #System_Initialization</data>
+      <data key="basic-block">n:-2:-4 n:-2:-4</data>
+      <data key="kind">entry</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-2:-4" target="n:-2:-6">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-2:-4" target="n:-2:-5">
+      <data key="type">control</data>
+    </edge>
+    <edge source="n:-2:-4" target="n:-2:-2">
+      <data key="when">l0</data>
+    </edge>
+    <node id="n:-2:-3">
+      <data key="label">return: #System_Initialization</data>
+      <data key="basic-block">n:-2:-3 n:-2:-3</data>
+      <data key="kind">return</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+    </node>
+    <edge source="n:-2:-3" target="n:-2:-6"/>
+    <node id="n:-2:-2">
+      <data key="label">call: main</data>
+      <data key="basic-block">n:-2:-2 n:-2:-2</data>
+      <data key="kind">call-site</data>
+      <data key="alocs-used"></data>
+      <data key="alocs-defd"></data>
+      <data key="alocs-mayd"></data>
+      <data key="call-id">n:-3:1</data>
+      <data key="call-name">main</data>
+    </node>
+    <edge source="n:-2:-2" target="n:-3:1">
+      <data key="type">control</data>
+      <data key="scope">interprocedural</data>
+    </edge>
+    <edge source="n:-2:-2" target="n:-2:-3"/>
+  </graph>
+</graphml>

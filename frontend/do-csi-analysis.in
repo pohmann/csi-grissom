@@ -1,0 +1,168 @@
+#!/usr/bin/env python
+
+TOP_DIR="@TOP_DIR@"
+CC_DIR="@CSI_CC_DIR@"
+
+# normal imports
+from argparse import ArgumentParser
+from os.path import abspath
+from shutil import rmtree
+from subprocess import call, check_call, check_output
+from sys import stderr
+from tempfile import mkdtemp
+import os
+
+# other relevant paths that we use
+GDB_COMMANDS_DIR = os.path.join(TOP_DIR, "gdb-commands");
+ANALYSIS_DIR = TOP_DIR;
+
+# update PYTHONPATH for imports
+# the way this works is very hack-ish, but will have to do for now
+# (I wanted to just modify sys.path, but it turns out that I need to find egg
+#  files, and don't know how to do that without re-doing PYTHONPATH extraction)
+pythonPathExtensions = ["/p/csi/public/tools/networkx/1.10/install", \
+                 "/p/csi/public/tools/pyfst/install", \
+                 "/p/csi/public/tools/jpype/install", \
+                 os.path.join(ANALYSIS_DIR, "analysis"), \
+                 os.path.join(ANALYSIS_DIR, "analysis", "csilibs")];
+import site
+for newPath in pythonPathExtensions:
+  site.addsitedir(newPath);
+
+# imports from new PYTHONPATH locations
+from grissom import ANALYSIS_OPTIONS, RESULT_STYLES
+
+# set PATH and PYTHONPATH environment variables for shell commands
+oldPath = os.environ.get("PATH", "").split(os.pathsep);
+os.environ["PATH"] = os.pathsep.join([os.path.join(ANALYSIS_DIR, "frontend"), \
+                                  os.path.join(ANALYSIS_DIR, "analysis"), \
+                                  os.path.join(CC_DIR, "Tools"), \
+                                  "/s/gcc-4.9.2/bin", \
+                                  "/unsup/gdb-7.9/bin", \
+                                  "/s/python-2.7.1/bin", \
+                                  "/s/autoconf-2.69/bin", \
+                                  "/usr/lib/jvm/java-1.8.0-oracle.x86_64/bin", \
+                                  "/usr/bin", \
+                                  "/bin"] + oldPath);
+oldPythonPath = os.environ.get("PYTHONPATH", "").split(os.pathsep);
+os.environ["PYTHONPATH"] = os.pathsep.join(pythonPathExtensions + \
+                                           oldPythonPath);
+
+
+def extractOne(metadataFile, metadataType, executable):
+  with open(metadataFile, 'w') as outFile:
+    call("extract-section .debug_" + metadataType + " " + executable,\
+         shell=True, stdout=outFile);
+#end: extractOne
+
+def parseArguments():
+  parser = ArgumentParser(prog="do-csi-analysis",
+                          description="Determine (yes, no, maybe) for the " + \
+                                      "provided failure.");
+  parser.add_argument("executable", help="The failed executable (must be " + \
+                                         "built with csi-cc)");
+  parser.add_argument("corefile", help="The core dump from the failing run");
+  parser.add_argument("-save-temps", "--save-temps", action="store_true",
+                      dest="savetemps", default=False,
+                      help="Keep all temporary files in cwd, " + \
+                           "and don't delete them after analysis.");
+  parser.add_argument("-result-style", "--result-style", action="store",
+                      dest="result_style",
+                      choices=RESULT_STYLES,
+                      default="standard",
+                      help="Indicate how results should be written out " +\
+                           "after analysis completes.");
+  parser.add_argument("-solver", "--solver", action="store", dest="solver",
+                      choices=ANALYSIS_OPTIONS,
+                      default="UTL",
+                      help="Indicate which solver should be used for " +\
+                           "analyzing extracted failure data.");
+  parser.add_argument("-debug", "--debug", action="store_true",
+                      dest="debug", default=False,
+                      help="Print all output from extraction and analysis " +\
+                           "tools.  (By defult, only error output and the " +\
+                           "final result are shown.)");
+  return(parser.parse_args());
+#end: parseArguments
+
+def main():
+  args = parseArguments();
+
+  if(not os.path.isfile(args.executable)):
+    print >> stderr, ("ERROR: specified executable does not exist");
+    exit(1);
+  elif(not os.path.isfile(args.corefile)):
+    print >> stderr, ("ERROR: specified corefile does not exist");
+    exit(1);
+  #end if
+
+  try:
+    tmpDir = mkdtemp(prefix="csi", dir=(os.getcwd() if args.savetemps else None));
+
+    # name all metadata files
+    ptMetadataFile = os.path.join(tmpDir, "metadata.pt");
+    ccMetadataFile = os.path.join(tmpDir, "metadata.cc");
+    fcMetadataFile = os.path.join(tmpDir, "metadata.fc");
+    bbcMetadataFile = os.path.join(tmpDir, "metadata.bbc");
+    cfgFile = os.path.join(tmpDir, "metadata.cfg");
+
+    # extract metadata
+    extractOne(ptMetadataFile, "PT", args.executable);
+    extractOne(ccMetadataFile, "CC", args.executable);
+    extractOne(fcMetadataFile, "FC", args.executable);
+    extractOne(bbcMetadataFile, "BBC", args.executable);
+    check_call("extract-cfg " + args.executable + " " + cfgFile, shell=True);
+
+    with open(os.devnull, 'wb') as nullOut:
+
+      # extract dynamic data
+      jsonFile = os.path.join(tmpDir, "data.json");
+      check_call("edb" + \
+                 " " + abspath(args.executable) + \
+                 " " + abspath(args.executable) + \
+                 " " + abspath(args.corefile) + \
+                 " " + cfgFile + \
+                 " " + ccMetadataFile + \
+                 " " + ptMetadataFile + \
+                 " " + fcMetadataFile + \
+                 " " + bbcMetadataFile + \
+                 " " + GDB_COMMANDS_DIR, \
+                 shell=True, cwd=tmpDir, stdout=nullOut);
+      check_call("failuredatatojson.py" + \
+                 " " + cfgFile + \
+                 " " + os.path.join(tmpDir, "local.data") + \
+                 " " + os.path.join(tmpDir, "global.data") + \
+                 " " + ccMetadataFile + \
+                 " " + bbcMetadataFile + \
+                 " " + ptMetadataFile + \
+                 " " + jsonFile, \
+                 shell=True, stdout=nullOut);
+
+      # get global result: call the CSI analysis solver
+      runString = "csi-grissom " + cfgFile + \
+                  " --json=" + jsonFile + \
+                  " --first=" + args.solver + \
+                  " --second=None" + \
+                  " --result-style=" + args.result_style;
+      if(args.debug):
+        check_call(runString, shell=True);
+      else:
+        globalOut = check_output(runString, shell=True);
+        resultsStarted = False;
+        for line in globalOut.strip().splitlines():
+          if(resultsStarted):
+            print(line + (";0" if args.result_style == "csiclipse" else ""));
+          elif(line.strip() == "--- Begin results"):
+            resultsStarted = True;
+        #end for
+      #end if
+
+    #end with
+  finally:
+    if(not args.savetemps):
+      rmtree(tmpDir, ignore_errors=True);
+  #end with
+#end: main
+
+if __name__ == '__main__' :
+  main()

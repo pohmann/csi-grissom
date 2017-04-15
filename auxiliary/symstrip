@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]
+then
+  echo "Usage: symstrip [obj_file]"
+  exit 1
+fi
+
+echo "symstrip: stripping $1, putting debug info into $1.sym..."
+objcopy --only-keep-debug "$1" "$1.sym"
+strip --strip-debug --strip-unneeded "$1"
+objcopy --add-gnu-debuglink="$1.sym" "$1"

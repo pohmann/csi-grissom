@@ -1,0 +1,35 @@
+#!/bin/bash -e
+
+if [ $# -ne 9 ]
+then
+  echo "Usage: edb app symbols core graph-file cc-file pt-file fc-file bbc-file commands-dir"
+  echo "You passed "+"$@"
+  exit 1
+fi
+
+executablefile=$(readlink -f -n $1)
+symbolsfile=$(readlink -f -n $2)
+corefile=$(readlink -f -n $3)
+
+# graphfile=$(readlink -f -n $4) # (ignored)
+ccfile=$(readlink -f -n $5)
+# ptfile=$(readlink -f -n $6) (unused)
+fcfile=$(readlink -f -n $7)
+bbcfile=$(readlink -f -n $8)
+
+commandsdir=$(readlink -f -n $9)
+
+rm -f ./global.data
+export CC_FILE="$ccfile"
+export FC_FILE="$fcfile"
+export BBC_FILE="$bbcfile"
+gdb $executablefile -symbols=$symbolsfile -core=$corefile -command=$commandsdir/global-commands.gdb -batch -f | filter-global.py 1>./global.data
+export CC_FILE=''
+export FC_FILE=''
+export BBC_FILE=''
+
+rm -f ./local.data
+gdb $executablefile -symbols=$symbolsfile -core=$corefile -command=$commandsdir/stack-commands.gdb -batch -f | filter-local.py 1>./local.data
+
+rm -f ./run_hash
+cat ./local.data ./global.data | md5sum > ./run_hash
