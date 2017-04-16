@@ -1,6 +1,6 @@
 # CSI: Grissom
 
-An analysis framework for answer user control-flow queries. The techniques were
+An analysis framework for answering user control-flow queries. The techniques were
 originally proposed in
 
 > P. Ohmann, A. Brooks, L. D'Antoni, and B. Liblit.
