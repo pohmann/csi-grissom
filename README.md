@@ -14,7 +14,7 @@ PLDI, 2017.  ACM.
 ## Building
 
 The dependencies for CSI-Grissom are:
-* [csi-cc](https://github.com/liblit/csi-cc)
+* [csi-cc](https://github.com/pohmann/csi-cc)
 * [JPype](https://jpype.readthedocs.io/en/latest)
 * [NetworkX](https://networkx.github.io) 1.10+
 * [Python](https://www.python.org) 2.7.x
@@ -24,7 +24,7 @@ The dependencies for CSI-Grissom are:
 To build Grissom, run `make`.  You will need to specify the installation
 location of the
 [SymbolicAutomata](https://github.com/lorisdanto/symbolicautomata) library and
-the [csi-cc](https://github.com/liblit/csi-cc) instrumenting compiler on
+the [csi-cc](https://github.com/pohmann/csi-cc) instrumenting compiler on
 your system (if not in your PATH).  To do so, run `make` as follows:
 ```
 make SVPA_LIB_DIR=/path/to/symbolicautomata/SVPAlib CSI_CC=/path/to/csi-cc/Release/csi-cc
@@ -108,7 +108,7 @@ updates and internal log messages printed by `csi-grissom`.
 
 Note that the executable *must* be produced by the `csi-cc` instrumenting C
 compiler.  The `csi-cc` compiler is
-[extensively documented](https://rawgit.com/liblit/csi-cc/master/doc/index.html).
+[extensively documented](https://rawgit.com/pohmann/csi-cc/master/doc/index.html).
 We recommend the following command to compile for testing:
 ```
 csi-cc --trace=/path/to/csi-cc/schemas/cc.schema -csi-opt=2 -opt-style=simple my_file.c
